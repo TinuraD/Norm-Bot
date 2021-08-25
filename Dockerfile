@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/ef_norm
-RUN git clone -b main https://github.com/Efbots/Norm /root/ef_norm
+RUN git clone -b main https://github.com/TinuraD/EF-Norm /root/ef_norm
 WORKDIR /root/ef_norm
 
 #Copy config file to /root/ef_norm/ef_norm
