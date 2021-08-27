@@ -21,9 +21,9 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from Sophia import *
+from ef_norm import *
 
-from Sophia.events import register
+from ef_norm.events import register
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36"
