@@ -12,6 +12,10 @@ from pyrogram.types import *
 API = "https://api.abirhasan.wtf/google?query="
 
 
+BOT_TOKEN = "1928487441:AAFQotCcwAOEKHyb9TsSeBPyfjIdZ4ba5Ps"
+API_ID = "2288609"
+API_HASH = "cf4904241728b994387a80302a1ec034"
+
 Bot = Client(
     "Google-Search-Bot",
     bot_token = os.environ["BOT_TOKEN"],
