@@ -1,24 +1,65 @@
+from ef_norm import telethn as tbot
+
+from telethon import TelegramClient, events
+import json
 import requests
-from telegram import ParseMode, Update
-from telegram.ext import CallbackContext, run_async
-
-from ef_norm import dispatcher
-from ef_norm.modules.disable import DisableAbleCommandHandler
 
 
-@run_async
-def covid(update: Update, context: CallbackContext):
-    message = update.effective_message
-    text = message.text.split(" ", 1)
-    if len(text) == 1:
-        r = requests.get("https://corona.lmao.ninja/v2/all").json()
-        reply_text = f"**Global Totals** 🦠\nCases: {r['cases']:,}\nCases Today: {r['todayCases']:,}\nDeaths: {r['deaths']:,}\nDeaths Today: {r['todayDeaths']:,}\nRecovered: {r['recovered']:,}\nActive: {r['active']:,}\nCritical: {r['critical']:,}\nCases/Mil: {r['casesPerOneMillion']}\nDeaths/Mil: {r['deathsPerOneMillion']}"
-    else:
-        variabla = text[1]
-        r = requests.get(f"https://corona.lmao.ninja/v2/countries/{variabla}").json()
-        reply_text = f"**Cases for {r['country']} 🦠**\nCases: {r['cases']:,}\nCases Today: {r['todayCases']:,}\nDeaths: {r['deaths']:,}\nDeaths Today: {r['todayDeaths']:,}\nRecovered: {r['recovered']:,}\nActive: {r['active']:,}\nCritical: {r['critical']:,}\nCases/Mil: {r['casesPerOneMillion']}\nDeaths/Mil: {r['deathsPerOneMillion']}"
-    message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN)
+def staa():
+    r = requests.get('https://hpb.health.gov.lk/api/get-current-statistical')
+    jsondata = json.loads(r.text)
+    update_date_time    = str(jsondata['data']['update_date_time'])
+    local_new_cases     = str(jsondata['data']['local_new_cases'])
+    local_active_cases  = str(jsondata['data']['local_active_cases'])
+    local_total_cases   = str(jsondata['data']['local_total_cases'])
+    local_deaths        = str(jsondata['data']['local_deaths'])
+    local_recovered     = str(jsondata['data']['local_recovered'])
+    local_total_number_of_individuals_in_hospitals = str(jsondata['data']['local_total_number_of_individuals_in_hospitals'])
+    global_new_cases    = str(jsondata['data']['global_new_cases'])
+    global_total_cases  = str(jsondata['data']['global_total_cases'])
+    global_deaths       = str(jsondata['data']['global_deaths'])
+    global_new_deaths   = str(jsondata['data']['global_deaths'])
+    global_recovered    = str(jsondata['data']['global_recovered'])
+
+    textt = str(
+                    '<b>වත්මත් තත්තවය</b>' + '\n' + '\n' + '<b>' +
+                    update_date_time + ' ට යාවත්කාලීන කරන ලදී. </b>' + '\n' + '\n' +
+                    '<b>🇱🇰 ශ්‍රී ලංකාවේ කොරෝනා තත්වය</b>' + '\n' + '\n'  +
+                    '🤒 තහවුරු කරන ලද මුළු රෝගීන් ගණන = ' + '<code>' +
+                    local_total_cases + '</code>' + '\n' +
+                    '🤕 තවමත් ප්‍රතිකාර ලබන රෝගීන් ගණන = ' + '<code>' + local_active_cases + '</code>' +
+                    '\n' + '😷 නව රෝගීන් ගණන = ' + '<code>' + local_new_cases + '</code>' +
+                    '\n'
+                    '🙂 මේ වන විට සුව වූ කොරෝන රෝගීන් ගණන = ' + '<code>' + local_recovered + '</code>' + 
+                    '\n' + '⚰ මුළු මරණ සංඛ්‍යාව = ' + '<code>'  + local_deaths + '</code>' + '\n' +
+                    '\n' + '<b>🌎 සමස්ත ලෝකයේ තත්වය</b>' + '\n' +
+                    '\n' + '🤒 තහවුරු කරන ලද මුළු රෝගීන් ගණන = ' '<code>'  +
+                    global_total_cases + '</code>' + '\n' + '😷 නව රෝගීන් ගණන = ' '<code>'  +
+                    global_new_cases + '</code>' + '\n' + '⚰ මුළු මරණ සංඛ්‍යාව = ' '<code>'  +
+                    global_deaths + '</code>' + '\n' + '🙂 මේ වන විට සුව වූ කොරෝනා රෝගීන් ගණන = ' '<code>'  +
+                    global_recovered + '</code>' + '\n' + '\n' + '\n' +
+                    '✅ සියලු තොරතුරු සෞඛ්‍ය ප්‍රවර්ධන කාර්‍යංශයෙන් ලබා ගත් තොරතුරු ය.' + '\n' +
+                    '@efbots - [Covid Updater](https://t.me/efcovidbot)')
+    return textt
 
 
-COVID_HANDLER = DisableAbleCommandHandler(["covid", "corona"], covid)
-dispatcher.add_handler(COVID_HANDLER)
+@tbot.on(events.NewMessage(pattern='/covid'))
+async def corona(event):
+    await event.respond(staa(),parse_mode='html')
+    raise events.StopPropagation
+
+def main():
+    """Start the bot."""
+    bot.run_until_disconnected()
+
+if __name__ == '__main__':
+    main()
+    
+
+__help__ = """
+*Covid:*
+✪ /covid - Latest Corona Virus Details.
+✪ Using Our @efcovidbot
+ 
+"""
+__mod_name__ = " Covid 🦠 "
