@@ -6,6 +6,7 @@ import os
 import requests
 from requests.utils import requote_uri
 from pyrogram import Client, filters
+from ef_norm import pbot
 from pyrogram.types import *
 
 API = "https://api.abirhasan.wtf/google?query="
@@ -23,7 +24,7 @@ JOIN_BUTTON = [
 ]
 
 
-@Bot.on_message(filters.private & filters.command(["google"]))
+@pbot.on_message(filters.private & filters.command(["google"]))
 async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
@@ -33,7 +34,7 @@ async def start(bot, update):
     )
 
 
-@Bot.on_inline_query()
+@pbot.on_inline_query()
 async def inline(bot, update):
     results = google(update.query)
     answers = []
