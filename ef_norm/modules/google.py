@@ -2,9 +2,6 @@
 
 from ef_norm import dispatcher
 
-__MODULE__ = "Google"
-__HELP__ = "/google For search"
-
 import os
 import requests
 from requests.utils import requote_uri
