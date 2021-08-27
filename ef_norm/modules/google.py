@@ -23,7 +23,7 @@ JOIN_BUTTON = [
 ]
 
 
-@pbot.on_message(filters.private & filters.command(["google"]))
+@Bot.on_message(filters.private & filters.command(["google"]))
 async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
@@ -33,7 +33,7 @@ async def start(bot, update):
     )
 
 
-@pbot.on_inline_query()
+@Bot.on_inline_query()
 async def inline(bot, update):
     results = google(update.query)
     answers = []
