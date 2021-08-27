@@ -1,6 +1,6 @@
 # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
 
-from tg_bot import dispatcher
+from ef_norm import dispatcher
 
 __MODULE__ = "Google"
 __HELP__ = "/google For search"
