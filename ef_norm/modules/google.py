@@ -1,5 +1,7 @@
 # Author: Fayas (https://github.com/FayasNoushad) (@FayasNoushad)
 
+from tg_bot import dispatcher
+
 __MODULE__ = "Google"
 __HELP__ = "/google For search"
 
