@@ -129,7 +129,7 @@ def config(client, message):
             input_str = input_str.replace("@", "")
             if input_str.lower() in ("off", "no", "disable"):
                 sql.disapprove(chat_id)
-                message.reply_text("Fsub off කරා ❌")
+                message.reply_text("Fsub off කරා.")
             elif input_str.lower() in ("clear"):
                 sent_message = message.reply_text(
                     "මම mute කරපු ඔක්කොම unmute කරා."
@@ -170,31 +170,18 @@ def config(client, message):
                     disable_web_page_preview=True,
                 )
             else:
-                message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
+                message.reply_text("Fsub off කරා.")
     else:
         message.reply_text(
-            "❗ **Group Creator Required**\n__You have to be the group creator to do that.__"
+            "මේ වැඩේ කරන්න පුළුවන් Group එකේ Owner ට විතරයි."
         )
 
 
 __help__ = """
-*ForceSubscribe:*
-
-✪ Daisy can mute members who are not subscribed your channel until they subscribe
-✪ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
-
-*Setup*
-1) First of all add me in the group as admin with ban users permission and in the channel as admin.
-Note: Only creator of the group can setup me and i will not allow force subscribe again if not done so.
- 
 *Commmands*
-✪ /FSub - To get the current settings.
-✪ /FSub no/off/disable - To turn of ForceSubscribe.
-✪ /FSub {channel username} - To turn on and setup the channel.
-✪ /FSub clear - To unmute all members who muted by me.
-
-Note: /FSub is an alias of /ForceSubscribe
-
- 
+• /FSub - දැට ඇති තත්වය දැන ගන්න.
+• /FSub no/off/disable - Fsub on,off කිරීම සදහා.
+• /FSub {channel username} - හදා ගන්න විදිහ
+• /FSub clear - mute කරපු හැමෝම unmute කරන්න. 
 """
 __mod_name__ = " Fsub 📢 "
