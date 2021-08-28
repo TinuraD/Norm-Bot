@@ -166,14 +166,14 @@ def config(client, message):
         else:
             if sql.fs_settings(chat_id):
                 message.reply_text(
-                    f"Fsub on කරා. හැමෝම අපේ [channel](https://t.me/{input_str}) එකට join වෙන්න. ✅"
+                    f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel](https://t.me/{sql.fs_settings(chat_id).channel})__",
                     disable_web_page_preview=True,
                 )
             else:
-                message.reply_text("Fsub off කරා.")
+                message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
     else:
         message.reply_text(
-            "මේ වැඩේ කරන්න පුළුවන් Group එකේ Owner ට විතරයි."
+            "❗ **Group Creator Required**\n__You have to be the group creator to do that.__"
         )
 
 
