@@ -595,19 +595,18 @@ def selfunban(context: CallbackContext, update: Update) -> str:
 
 __help__ = """
 *Kicks:*
- ✪ /kick <userhandle>*:* Kicks a user out of the group, (via handle, or reply)
- ✪ /skick <userhandle>*:* Silently kicks a user out of the group, (via handle, or reply)
- ✪ /kickme*:* Kicks the user who used the command.
+ ✪ /kick <userhandle>*:* User කෙනෙක් kick කරන්න. (via handle, or reply)
+ ✪ /skick <userhandle>*:* කාටවත් නොදැනෙන්න User කෙනෙක් kick කරන්න. (via handle, or reply)
+ ✪ /kickme*:* මේ command එක ගහන කෙනා kick වෙනවා.
  
 *Bans:*
- ✪ /ban <userhandle>*:* Bans a user. (via handle, or reply)
- ✪ /sban <userhandle>*:* Silently bans a user without leaving any message. (via handle, or reply)
- ✪ /tban <userhandle> x(m/h/d)*:* Bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /stban <userhandle> x(m/h/d)*:* Silently bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /unban <userhandle>*:* Unbans a user. (via handle, or reply)
-
+ ✪ /ban <userhandle>*:* User කෙනෙක් ban කරන්න. (via handle, or reply)
+ ✪ /sban <userhandle>*:* කාටවත් නොදැනෙන්න ban කෙනෙක් kick කරන්න. (via handle, or reply)
+ ✪ /tban <userhandle> x(m/h/d)*:* යම් කිසි කාලයක් සදහා කෙනෙක්ව ban කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+ ✪ /stban <userhandle> x(m/h/d)*:* කාටවත් නොදැනෙන්න යම් කිසි කාලයක් සදහා කෙනෙක්ව ban කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+ ✪ /unban <userhandle>*:* User කෙනෙක් unban කරන්න. (via handle, or reply)
 _NOTE:_
- If you set Log Channels, you will get logs of Silent kick and bans. Check *Logger* module to know more about Log Channel.
+ කෙනෙක්ව ban කරොත් අයේ unban කරනකන් join වෙන්න බෑ, එත් kick කරාම එවෙලෙම වුනත් අයේ join වෙන්න පුළුවන්.
 """
 
 BAN_HANDLER = CommandHandler("ban", ban)
@@ -630,7 +629,7 @@ dispatcher.add_handler(ROAR_HANDLER)
 dispatcher.add_handler(KICKME_HANDLER)
 dispatcher.add_handler(SBAN_HANDLER)
 
-__mod_name__ = "Bans 🛑"
+__mod_name__ = "Bans 🚫"
 __handlers__ = [
     BAN_HANDLER,
     TEMPBAN_HANDLER,
