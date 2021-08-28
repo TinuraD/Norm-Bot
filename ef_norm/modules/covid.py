@@ -62,4 +62,4 @@ __help__ = """
 • Using Our @efcovidbot
  
 """
-__mod_name__ = " කොරොනා 🦠 "
+__mod_name__ = " Covid 🦠 "
