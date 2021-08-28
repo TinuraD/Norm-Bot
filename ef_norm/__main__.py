@@ -385,11 +385,8 @@ def ef_norm_about_callback(update, context):
             f"\n\nගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")],
-                ]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_")]]
             ),
         )
     elif query.data == "aboutmanu_credit":
@@ -402,7 +399,7 @@ def ef_norm_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_")]]
             ),
         )
 @run_async
