@@ -57,9 +57,9 @@ if __name__ == '__main__':
     
 
 __help__ = """
-*Covid:*
-✪ /covid - Latest Corona Virus Details.
-✪ Using Our @efcovidbot
+*කොරොනා:*
+• /covid - Latest Corona Virus Details.
+• Using Our @efcovidbot
  
 """
-__mod_name__ = " Covid 🦠 "
+__mod_name__ = " කොරොනා 🦠 "
