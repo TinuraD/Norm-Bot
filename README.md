@@ -9,11 +9,6 @@
 
 # Deploy your own bot here.
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TinuraD/EF-Norm.git)
-
-
-[![Deploy](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/TinuraD/EF-Norm) Not Working Deploy on Railway Correctly ❌, Use Heroku ✅
-
-
 ## Credits
 
 This bot besed on [TG Bot](https://github.com/PaulSonOfLars/tgbot) which made by [PaulSonOfLars](https://github.com/PaulSonOfLars). So oiginal credits go to [PaulSonOfLars](https://github.com/PaulSonOfLars) and his dedication.
