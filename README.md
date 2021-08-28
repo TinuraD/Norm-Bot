@@ -16,17 +16,11 @@
 This bot besed on [TG Bot](https://github.com/PaulSonOfLars/tgbot) which made by [PaulSonOfLars](https://github.com/PaulSonOfLars). So oiginal credits go to [PaulSonOfLars](https://github.com/PaulSonOfLars) and his dedication.
 
 Other Credits
- - SaitamaRobot
- - MissJuliaRobot
- - SuzuyaProbot
- - Daisy
- - FridayUserbot
- - Uniborg
+ - DaisyBot
  - Telethon
  - Pyrogram
- - Skylee
- - emilia
  - MaxRobot
+ - SZ-RoseBot
 
 ## Contributors
 
