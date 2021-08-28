@@ -25,4 +25,4 @@ __help__ = """
 ** More **
  - /phone <Phone නම්බරේ> : Phone නම්බර් Track කරන්න.
 """
-__mod_name__ = "තවත් Tools 🧰"
+__mod_name__ = "More Tools 🧰"
