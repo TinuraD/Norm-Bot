@@ -166,11 +166,11 @@ def config(client, message):
         else:
             if sql.fs_settings(chat_id):
                 message.reply_text(
-                    f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel](https://t.me/{sql.fs_settings(chat_id).channel})__",
+                    f"✅ **Fsub කරා..**\n__ මේ [Channel](https://t.me/{sql.fs_settings(chat_id).channel})එකට__",
                     disable_web_page_preview=True,
                 )
             else:
-                message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
+                message.reply_text("Fsub off කරා.")
     else:
         message.reply_text(
             "❗ **Group Creator Required**\n__You have to be the group creator to do that.__"
@@ -178,7 +178,8 @@ def config(client, message):
 
 
 __help__ = """
-*Commmands*
+
+*විධාන*
 • /FSub - දැට ඇති තත්වය දැන ගන්න.
 • /FSub no/off/disable - Fsub on,off කිරීම සදහා.
 • /FSub {channel username} - හදා ගන්න විදිහ
