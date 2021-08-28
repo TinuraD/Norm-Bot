@@ -385,6 +385,7 @@ def ef_norm_about_callback(update, context):
             f"\n\nගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=False
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")],
