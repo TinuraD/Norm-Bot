@@ -595,16 +595,16 @@ def selfunban(context: CallbackContext, update: Update) -> str:
 
 __help__ = """
 *Kicks:*
- ✪ /kick <userhandle>*:* User කෙනෙක් kick කරන්න. (via handle, or reply)
- ✪ /skick <userhandle>*:* කාටවත් නොදැනෙන්න User කෙනෙක් kick කරන්න. (via handle, or reply)
- ✪ /kickme*:* මේ command එක ගහන කෙනා kick වෙනවා.
+ • /kick <userhandle> - User කෙනෙක් kick කරන්න. (via handle, or reply)
+ • /skick <userhandle> - කාටවත් නොදැනෙන්න User කෙනෙක් kick කරන්න. (via handle, or reply)
+ • /kickme*:* මේ command එක ගහන කෙනා kick වෙනවා.
  
 *Bans:*
- ✪ /ban <userhandle>*:* User කෙනෙක් ban කරන්න. (via handle, or reply)
- ✪ /sban <userhandle>*:* කාටවත් නොදැනෙන්න ban කෙනෙක් kick කරන්න. (via handle, or reply)
- ✪ /tban <userhandle> x(m/h/d)*:* යම් කිසි කාලයක් සදහා කෙනෙක්ව ban කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /stban <userhandle> x(m/h/d)*:* කාටවත් නොදැනෙන්න යම් කිසි කාලයක් සදහා කෙනෙක්ව ban කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /unban <userhandle>*:* User කෙනෙක් unban කරන්න. (via handle, or reply)
+ • /ban <userhandle> - User කෙනෙක් ban කරන්න. (via handle, or reply)
+ • /sban <userhandle> - කාටවත් නොදැනෙන්න ban කෙනෙක් kick කරන්න. (via handle, or reply)
+ • /tban <userhandle> x(m/h/d) - යම් කිසි කාලයක් සදහා කෙනෙක්ව ban කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+ • /stban <userhandle> x(m/h/d) - කාටවත් නොදැනෙන්න යම් කිසි කාලයක් සදහා කෙනෙක්ව ban කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+ • /unban <userhandle> - User කෙනෙක් unban කරන්න. (via handle, or reply)
 _NOTE:_
  කෙනෙක්ව ban කරොත් අයේ unban කරනකන් join වෙන්න බෑ, එත් kick කරාම එවෙලෙම වුනත් අයේ join වෙන්න පුළුවන්.
 """
