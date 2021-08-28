@@ -77,7 +77,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="මාව Group එකට add කරන්න ➕️", url="t.me/efnormmbot?startgroup=true"),
+            text="මාව Group එකට add කරන්න ➕️", url="t.me/efnormbot?startgroup=true"),
     ]
 ]
 
@@ -189,7 +189,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="ආපසු", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="help_back")]]
                     ),
                 )
 
@@ -299,7 +299,7 @@ def help_button(update, context):
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="ආපසු", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="help_back")]]
                 ),
             )
 
@@ -360,18 +360,13 @@ def ef_norm_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="කොහොමද භාවිතා කරන්නේ", callback_data="aboutmanu_howto"
+                            text="උදවු 📔", callback_data="aboutmanu_howto"
                         ),
                         InlineKeyboardButton(
-                            text="Credits", callback_data="aboutmanu_credit"
+                            text="ස්තූතිය 🙏", callback_data="aboutmanu_credit"
                         ),
                     ],
-                    [
-                        InlineKeyboardButton(
-                            text="විධාන 📌", callback_data="help_back"
-                        )
-                    ],
-                    [InlineKeyboardButton(text="ආපසු", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -385,7 +380,7 @@ def ef_norm_about_callback(update, context):
 
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
-            text=f"* ｢ BASIC HELP 」*"
+            text=f"භාවිතා කරන ආකාරය*"
             f"\nIf First add {dispatcher.bot.first_name} To Your Group By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true)or manually. \n"
             f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [SL Bot Zone](https://t.me/slbotzone).\n"
             f"",
@@ -398,7 +393,7 @@ def ef_norm_about_callback(update, context):
                             text="Credits", callback_data="aboutmanu_credit"
                         ),
                     ],
-                    [InlineKeyboardButton(text="ආපසු", callback_data="aboutmanu_")],
+                    [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")],
                 ]
             ),
         )
@@ -411,7 +406,7 @@ def ef_norm_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
             ),
         )
 @run_async
