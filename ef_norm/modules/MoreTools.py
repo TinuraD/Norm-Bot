@@ -1,28 +1,28 @@
 __help__ = """
 ** GPS **
- - /gps <Place> : Show Location on a map
+ - /gps <හොයන්න ඕන තැන>  - අපි දෙන තැන Mpa එක බලන්න.
  
  ** Blue Cleaner **
  - /cleanblue on : Turn bluetext cleaner on
  - /cleanblue off : Turn bluetext cleaner off
  
  ** Send **
- - /snd <Text> : Message like the bot
+ - /snd <message> : Bot ගෙන් message දාන්න.
  
 ** Grammer **
- - /t <reply> : Show grammer corrected text
+ - /t <reply> : Grammer හරි ගස්සන්න
  
 ** Image Tools**
- - /img <text>: perform a image search
- - /getqr <reply to image>: Read QR code
- - /makeqr <reply to text>: Make QR code
+ - /img <ඕන image එක search කරන්න>: Photo කරන්න
+ - /getqr <photo එකකට reply කරන්න >: Photo එකට QR code එකක් හදන්න
+ - /makeqr <Link එක දෙන්න>: Make QR code එකක් හදන්න.
  
-** Style Text **
+** Style Text කරන්න **
  - /weebify : Weebify Text
  - /square : square Text
  - /blue : Blues text
  
 ** More **
- - /phone <tp no> : Track Phone no
+ - /phone <Phone නම්බරේ> : Phone නම්බර් Track කරන්න.
 """
-__mod_name__ = "More Tools 🧩"
+__mod_name__ = "තවත් Tools 🧰"
