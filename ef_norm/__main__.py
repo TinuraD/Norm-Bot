@@ -352,7 +352,7 @@ def ef_norm_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"* හායි, මම {dispatcher.bot.first_name}  \n\nමම ටිනුර දිනිත් හදපු group management බොට් කෙනෙක්.* "
+            text=f"*හායි, මම {dispatcher.bot.first_name}  \n\nමම ටිනුර දිනිත් හදපු group management බොට් කෙනෙක්.* "
             f"\n\n මට පුළුවන් අනිත් බොට්ල වගේම Group Manage කරන්න. ඒ වගේම ඊටත් වඩා තවත් Features ගණනාවක් මට තියෙන්වා. පහළ Buttons වලින් තවත් විස්තර දැන ගන්න පුළුවන්.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -381,28 +381,23 @@ def ef_norm_about_callback(update, context):
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
             text=f"භාවිතා කරන ආකාරය*"
-            f"\nIf First add {dispatcher.bot.first_name} To Your Group By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true)or manually. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [SL Bot Zone](https://t.me/slbotzone).\n"
+            f"\nIf මාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁"
+            f"\n\nගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="Credits", callback_data="aboutmanu_credit"
-                        ),
-                    ],
                     [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")],
                 ]
             ),
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
-            f"\n\nBased on [MaxRobot](https://github.com/sltechworld/Max-Robot)."
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by SupunMax"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            text=f"අපේ මේ Norm Bot හදන්න ගොඩක් දෙනෙක්ගේ සහාය ලැබුණා. ඒ වගේම ගොඩක් දෙනක් ඉන්නවා ස්තූති කරන්න."
+            f"\n  • [Paul Larsen](https://github.com/PaulSonOfLars/tgbot)"
+            f"\n\ • [Daisy Bot](https://t.me/DaisyXbot)"
+            f"\n\ • [SL Bot Zone](https://t.me/slbotzone)"
+            f"\n\ඒ අතරින් ප්‍රධානම අය තමා ඔය උඩින් සදහන් කරේ මීට අමතරව ගොඩක් දෙනෙක් මේ වැඩේට සහාය වුණා. ඒ හැමෝටම ස්තූතියි. 🙏 ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
