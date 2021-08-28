@@ -396,10 +396,10 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 මේ Feature එකෙන් කවුරු හරි නවත්තන්නෙ නැතුව එක දිගට message දානවනම්, අපිට පුළුවන් කලින් ඉදන් කෙනෙකුට එක දිගට වේගෙන් message ගොඩාක් දාන් ගියොත් ඒ වගේ අයට දඩුවමක් දෙන්න හදන්න.
- • /flood*:* මේ වෙද්දි හදලා තියෙනව විස්තර දැන ගන්න.
+ • /flood - මේ වෙද්දි හදලා තියෙනව විස්තර දැන ගන්න.
 *Admin only:*
- • /setflood <int/'no'/'off'>: Flood control on, off කරන්න.
- • /setfloodmode <ban/kick/mute/tban/tmute> <value>: එක දිගට දාන පුළුවන් message ගාණට වඩා දැම්මමාම වෙන්න ඕන දේ.. ban/kick/mute/tmute/tban
+ • /setflood <int/'no'/'off'> - Flood control on, off කරන්න.
+ • /setfloodmode <ban/kick/mute/tban/tmute> <value> - එක දිගට දාන පුළුවන් message ගාණට වඩා දැම්මමාම වෙන්න ඕන දේ.. ban/kick/mute/tmute/tban
  Note:
  - උඩ feature එක වැඩ කරන්න on/off වගේ තියෙනව කොටසෙනුත් හරි එක දාන්න ඕනේ.
  It can be:
