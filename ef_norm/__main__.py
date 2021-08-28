@@ -94,9 +94,6 @@ HELP_STRINGS = f"""
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-
-DONATE_STRING = """"""
-
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
