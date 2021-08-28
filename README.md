@@ -20,7 +20,6 @@ Other Credits
  - Telethon
  - Pyrogram
  - MaxRobot
- - SZ-RoseBot
 
 ## Contributors
 
