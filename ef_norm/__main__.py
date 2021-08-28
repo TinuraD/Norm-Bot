@@ -87,13 +87,15 @@ HELP_STRINGS = f"""
 • /start: මාව start කරන්න
 • /help: Commands ටික දැන ගන්න.
 • /settings: සැකසුම් සදහා.
+
+පිටු 3 ක විධාන සදහන් වේ. ⬅️ ➡️ භාවිතා කරමින් හුවමාරු වෙන්න.
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
 
-DONATE_STRING = """පරිත්‍යාග කිරීමට සිතීම ගැන සතුටු වෙනවා."""
+DONATE_STRING = """"""
 
 IMPORTED = {}
 MIGRATEABLE = []
