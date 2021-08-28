@@ -147,9 +147,9 @@ def check_afk(update, context, user_id, fst_name, userc_id):
 
 
 __help__ = """
- • `/afk <reason>`*:* mark yourself as AFK(away from keyboard).
- • `brb <reason>`*:* same as the afk command - but not a command.
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+ • `/afk <reason>`*:* AFK(Away From Keyborad) කියලා ලකුණු කරන්න.
+ • `brb <reason>`*:* AFK වගේමයි. ඒත් command එකක් නෙමේ.
+AFK කියලා දුන්නාම ඔයා online නැති වෙලාවට ඔයා AFK කියලා කියනවා.
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
