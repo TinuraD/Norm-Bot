@@ -381,7 +381,7 @@ def ef_norm_about_callback(update, context):
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
             text=f"භාවිතා කරන ආකාරය*"
-            f"\nIf මාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁"
+            f"\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁"
             f"\n\nගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න.\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -395,8 +395,8 @@ def ef_norm_about_callback(update, context):
         query.message.edit_text(
             text=f"අපේ මේ Norm Bot හදන්න ගොඩක් දෙනෙක්ගේ සහාය ලැබුණා. ඒ වගේම ගොඩක් දෙනක් ඉන්නවා ස්තූති කරන්න."
             f"\n  • [Paul Larsen](https://github.com/PaulSonOfLars/tgbot)"
-            f"\n\ • [Daisy Bot](https://t.me/DaisyXbot)"
-            f"\n\ • [SL Bot Zone](https://t.me/slbotzone)"
+            f"\n  • [Daisy Bot](https://t.me/DaisyXbot)"
+            f"\n  • [SL Bot Zone](https://t.me/slbotzone)"
             f"\n\ඒ අතරින් ප්‍රධානම අය තමා ඔය උඩින් සදහන් කරේ මීට අමතරව ගොඩක් දෙනෙක් මේ වැඩේට සහාය වුණා. ඒ හැමෝටම ස්තූතියි. 🙏 ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
