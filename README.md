@@ -11,7 +11,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TinuraD/EF-Norm.git)
 ## Credits
 
-This bot besed on [TG Bot](https://github.com/PaulSonOfLars/tgbot) which made by [PaulSonOfLars](https://github.com/PaulSonOfLars). So oiginal credits go to [PaulSonOfLars](https://github.com/PaulSonOfLars) and his dedication.
+- This bot besed on [TG Bot](https://github.com/PaulSonOfLars/tgbot) which made by [PaulSonOfLars](https://github.com/PaulSonOfLars). So oiginal credits go to [PaulSonOfLars](https://github.com/PaulSonOfLars) and his dedication.
 
 Other Credits
  - DaisyBot
