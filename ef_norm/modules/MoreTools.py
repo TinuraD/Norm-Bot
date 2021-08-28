@@ -1,6 +1,6 @@
 __help__ = """
 ** GPS **
- - /gps <හොයන්න ඕන තැන>  - අපි දෙන තැන Mpa එක බලන්න.
+ - /gps <හොයන්න ඕන තැන>  - අපි දෙන තැන Map එක බලන්න.
  
  ** Blue Cleaner **
  - /cleanblue on : Turn bluetext cleaner on
