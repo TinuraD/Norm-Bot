@@ -395,18 +395,20 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-මේ Feature එකෙන් කවුරු හරි නවත්තන්නෙ නැතුව එක දිගට message දානවනම්, අපිට පුළුවන් කලින් ඉදන් කෙනෙකුට එක දිගට වේගෙන් message ගොඩාක් දාන් ගියොත් ඒ වගේ අයට දඩුවමක් දෙන්න හදන්න.
- ✪ /flood*:* මේ වෙද්දි හදලා තියෙනව විස්තර දැන ගන්න.
+You know how sometimes, people join, send 100 messages, and ruin your chat? With antiflood, that happens no more!
+Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
+will result in restricting that user.
+ ✪ /flood*:* Get the current flood control setting
 *Admin only:*
- ✪ /setflood <int/'no'/'off'>: Flood control on, off කරන්න.
- ✪ /setfloodmode <ban/kick/mute/tban/tmute> <value>: එක දිගට දාන පුළුවන් message ගාණට වඩා දැම්මමාම වෙන්න ඕන දේ.. ban/kick/mute/tmute/tban
+ ✪ /setflood <int/'no'/'off'>: enables or disables flood control
+ ✪ /setfloodmode <ban/kick/mute/tban/tmute> <value>: Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
  Note:
- - උඩ feature එක වැඩ කරන්න on/off වගේ තියෙනව කොටසෙනුත් හරි එක දාන්න ඕනේ.
+ - Value must be filled for tban and tmute!
  It can be:
- 5m = මිනිත්තු 5
- 6h = පය 6
- 3d = දවස් 3
- 1w = සතියක්
+ 5m = 5 minutes
+ 6h = 6 hours
+ 3d = 3 days
+ 1w = 1 week
  """
 
 __mod_name__ = "Antiflood 🛡"
@@ -417,7 +419,7 @@ FLOOD_BAN_HANDLER = MessageHandler(
 SET_FLOOD_HANDLER = CommandHandler(
     "setflood", set_flood, pass_args=True
 )  # , filters=Filters.group)
-SET_FLOOD_MODE_HANDLER = CommandHandler
+SET_FLOOD_MODE_HANDLER = CommandHandler(
     "setfloodmode", set_flood_mode, pass_args=True
 )  # , filters=Filters.group)
 FLOOD_HANDLER = CommandHandler("flood", flood)  # , filters=Filters.group)
