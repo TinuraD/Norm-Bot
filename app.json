@@ -8,7 +8,7 @@
          "manager",
          "ef_norm"
       ],   
-   "repository": "https://github.com/Efficent-Bots/Norm",
+   "repository": "https://github.com/TinuraD/EF-Norm",
    "addons": [
       {
          "options": {
@@ -147,11 +147,6 @@
          "description": "Set this to True if you want ! to be a command prefix along with /. Recommended is True",
          "value": "True"
       },
-      "DONATION_LINK": {
-         "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
-         "required": false,
-         "value": "https://www.paypal.me/PaulSonOfLars"
-      },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
          "value": "True"
@@ -180,5 +175,5 @@
       "daisy"
    ],
    "name": "Norm",
-   "repository": "https://github.com/Efficent-Bots/Norm"
+   "repository": "https://github.com/TinuraD/EF-Norm"
 }
