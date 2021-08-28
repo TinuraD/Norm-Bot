@@ -381,13 +381,12 @@ def ef_norm_about_callback(update, context):
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
             text=f"භාවිතා කරන ආකාරය"
-            f"\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁"
-            f"\n\nගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න.\n"
+            f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න."
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
             ),
         )
     elif query.data == "aboutmanu_credit":
@@ -400,7 +399,7 @@ def ef_norm_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
             ),
         )
 @run_async
