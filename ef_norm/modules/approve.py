@@ -198,17 +198,13 @@ def unapproveall_btn(update: Update, context: CallbackContext):
 
 
 __help__ = """
-Sometimes, you might trust a user not to send unwanted content.
-Maybe not enough to make them admin, but you might be ok with locks, blacklists, and antiflood not applying to them.
-
-That's what approvals are for - approve of trustworthy users to allow them to send 
-
+මේකෙන් ඔයාට group එකේ ඉන්න user කෙනෙක්ට, ඔයා දාල තියෙන locks, flood control වගේ දේවල් බලපාන්නේ නැති වෙනවා. ඒ කියන්න ඔයා කාව හරි approve කරොත් එයාට මේ lock දේවල් අදාල වෙන්නෙ නෑ.
 *Admin commands:*
-- `/approval`*:* Check a user's approval status in this chat.
-- `/approve`*:* Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.
-- `/unapprove`*:* Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.
-- `/approved`*:* List all approved users.
-- `/unapproveall`*:* Unapprove *ALL* users in a chat. This cannot be undone.
+ • /approval - Approve කරලා තියෙන අය බලන්න.
+ • /approve - User කෙනෙක් Approve කරන්න.
+ • /unapprove - User කෙනෙක් Unapprove කරන්න.
+ • /approved - Approved කරපු users ලා list එක.
+ • /unapproveall - Unapprove *ALL* users in a chat. This cannot be undone.
 """
 
 APPROVE = DisableAbleCommandHandler("approve", approve)
@@ -225,6 +221,6 @@ dispatcher.add_handler(APPROVAL)
 dispatcher.add_handler(UNAPPROVEALL)
 dispatcher.add_handler(UNAPPROVEALL_BTN)
 
-__mod_name__ = "Approval 🦹‍♀️"
+__mod_name__ = "Approval 🏄"
 __command_list__ = ["approve", "unapprove", "approved", "approval"]
 __handlers__ = [APPROVE, DISAPPROVE, APPROVED, APPROVAL]
