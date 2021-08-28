@@ -464,14 +464,14 @@ def adminlist(update, context):
 __help__ = """
  ✪ /admins*:* list of admins in the chat
 
-*Admins only:*
- ✪ /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
- ✪ /unpin*:* unpins the currently pinned message
- ✪ /invitelink*:* gets invitelink
- ✪ /promote*:* promotes the user replied to
- ✪ /demote*:* demotes the user replied to
- ✪ /title <title here>*:* sets a custom title for an admin that the bot promoted
- ✪ /admincache*:* force refresh the admins list
+*Adminලට විතරයි:*
+ ✪ /pin*:* නිකන්ම reply කරපු message එක  pin කරන්න .`'loud'` හෝ `'notify'` දැම්මොත් අගට pin කරා කියලා notfication එකක් group එකේ දානවා.
+ ✪ /unpin*:* unpins කරන්න message.
+ ✪ /invitelink*:* Invite link එක ගන්න.
+ ✪ /promote*:* Reply කරන කෙනාව admin කරන්න.
+ ✪ /demote*:* Reply කරන කෙනාගේ admin අයින් කරන්න.
+ ✪ /title <title here>*:* Bot ගෙන් promote කරපු කෙනාගෙ admin title එකක් දෙන්න/වෙනස් කරන්න.
+ ✪ /admincache*:* Admins list එක refresh කරන්න.
  ✪ /zombies*:* scan and clean zombies
 """
 
