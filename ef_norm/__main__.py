@@ -683,25 +683,6 @@ def is_chat_allowed(update, context):
         pass
 
 
-@run_async
-def donate(update: Update, context: CallbackContext):
-    update.effective_message.from_user
-    chat = update.effective_chat  # type: Optional[Chat]
-    context.bot
-    if chat.type == "private":
-        update.effective_message.reply_text(
-            DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
-        )
-        update.effective_message.reply_text(
-            "You can also donate to the person currently running me "
-            "[here]({})".format(DONATION_LINK),
-            parse_mode=ParseMode.MARKDOWN,
-        )
-
-    else:
-        pass
-
-
 def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
@@ -727,8 +708,6 @@ def main():
         ef_norm_about_callback, pattern=r"aboutmanu_"
     )
 
-    donate_handler = CommandHandler("donate", donate)
-
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
     is_chat_allowed_handler = MessageHandler(Filters.group, is_chat_allowed)
 
@@ -741,7 +720,6 @@ def main():
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
     dispatcher.add_handler(is_chat_allowed_handler)
-    dispatcher.add_handler(donate_handler)
 
     dispatcher.add_error_handler(error_handler)
 
