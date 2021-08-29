@@ -76,13 +76,13 @@ async def song(client, message):
 
 
 __help__ = """
+@efnormbot
  *You can either enter just the song name or both the artist and song
   name. *
-
- ✪ /song <songname artist(optional)>*:* uploads the song in it's best quality available
- ✪ /video <songname artist(optional)>*:* uploads the video song in it's best quality available
- ✪ /lyrics <song>*:* returns the lyrics of that song.
-
+ ❍ /song <songname artist(optional)>*:* uploads the song in it's best quality available
+ ❍ /video <songname artist(optional)>*:* uploads the video song in it's best quality available
+ ❍ /lyrics <song>*:* returns the lyrics of that song.
+ 
 """
 
-__mod_name__ = "Music 🎧"
+__mod_name__ = "Music🎸"
