@@ -1,7 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from ef_norm import bot
 from pyrogram.errors import RPCError
 
 import functools
@@ -75,4 +74,4 @@ async def loltime(client, message):
 @bot.on_message(
     filters.command("start") & ~filters.edited & ~filters.bot)    
 async def lel(client, message):
-    lol = await message.reply("forward any file to get it without tag. \nCheck /help to know more")  
+    lol = await message.reply("forward any file to get it without tag. \nCheck /help to know more")
