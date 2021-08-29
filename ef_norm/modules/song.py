@@ -264,8 +264,9 @@ async def download_video(v_url):
 
 
 __help__ = """
- ❍ /music <සිංදුව ගායකයා(අවශ්‍යනම්)> - සිංදුව ගන්න.
- ❍ /vsong <සිංදුව ගායකයා(අවශ්‍යනම්)> - Video එකක් විදිහට සිංදුව ගන්න.
+@szrosebot🇱🇰
+ ❍ /music <songname artist(optional)>: uploads the song in it's best quality available
+ ❍ /vsong <songname artist(optional)>: uploads the video song in it's best quality available
  
 """
 
