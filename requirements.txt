@@ -33,6 +33,9 @@ pyrogram>=1.0.7
 tgCrypto>=1.2.2
 fontTools
 gtts
+youtube_search
+aiohttp
+aiofiles
 youtube_dl
 tswift
 pytz
