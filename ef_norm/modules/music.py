@@ -16,8 +16,8 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 
-from DewmiBot.events import register
-from DewmiBot.utils import progress
+from ef_norm.events import register
+from ef_norm.utils import progress
 
 try:
 
