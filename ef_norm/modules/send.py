@@ -1,6 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
+from ef_norm import pbot
 from pyrogram.errors import RPCError
 
 import functools
@@ -39,7 +40,7 @@ def get_text(message: Message) -> [None, str]:
         return None
 
 
-@bot.on_message(
+@pbot.on_message(
     filters.command("send") & ~filters.edited & ~filters.bot)
 @is_admin
 async def send(client, message):
@@ -55,7 +56,7 @@ async def send(client, message):
         args = get_text(message)
         await client.send_message(message.chat.id, text=args)
 
-@bot.on_message(
+@pbot.on_message(
     filters.command("edit") & ~filters.edited & ~filters.bot)
 @is_admin
 async def loltime(client, message):
@@ -71,7 +72,7 @@ async def loltime(client, message):
         await lol.edit(i)
         return
 
-@bot.on_message(
+@pbot.on_message(
     filters.command("start") & ~filters.edited & ~filters.bot)    
 async def lel(client, message):
     lol = await message.reply("forward any file to get it without tag. \nCheck /help to know more")
