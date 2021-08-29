@@ -5,8 +5,8 @@ from pyrogram import filters
 from pytube import YouTube
 from youtubesearchpython import VideosSearch
 
-from DewmiBot import LOGGER, pbot
-from DewmiBot.utils.ut import get_arg
+from ef_norm import LOGGER, pbot
+from ef_norm.utils.ut import get_arg
 
 
 def yt_search(song):
