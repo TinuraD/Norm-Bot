@@ -607,29 +607,23 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- ✪ /filters*:* List all active filters saved in the chat.
-
+ • /filters - දැනට active filters.
 *Admin only:*
- ✪ /filter <keyword> <reply message>*:* Add a filter to this chat. The bot will now reply that message whenever 'keyword'\
-is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker. NOTE: all filter \
-keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg: /filter "hey there" How you \
-doin?
- Separate diff replies by `%%%` to get random replies
- *Example:* 
- `/filter "filtername"
- Reply 1
- %%%
- Reply 2
- %%%
- Reply 3`
- ✪ /stop <filter keyword>*:* Stop that filter.
-
+ • /filter <වචනේ> <වචනෙට bot දෙන message එක> - Filter එකක් add කරන්න.
+   මෙතන්දී වචයක් වෙනුවට වැකියක් දෙන්න ඕනේ නම් උඩු කොමා ඇතුළේ වැකිය දෙන්න වචන්නෙ වෙනුවට.
+ •එක වචනයකට fileter කිහිපයක් දාන විදිය. (මෙතන්දී bot random එකක් select කරලා දෙනවා. අනිවාරෙන් relpy දෙකක් වෙන් කරන්න %%% ලකුණ දෙන්න.
+ *උදා:* 
+  /filter "filtername"
+  Reply 1
+  %%%
+  Reply 2
+  %%%
+  Reply 3
+ • /stop <වචනේ> - Filter ඔක්කොම නවත්තන්න.
 *Chat creator only:*
- ✪ /removeallfilters*:* Remove all chat filters at once.
-
-*Note*: Filters also support markdown formatters like: {first}, {last} etc.. and buttons.
-Check `/markdownhelp` to know more!
-
+ • /removeallfilters - Filter ඔක්කොම delete කරන්න.
+*Note*: Filters වලට markdown වගේ දේවලුත් වැඩ: {first}, {last} etc.. and buttons.
+ /markdownhelp දෙන්න ඒ ගැන දැන ගන්න.
 """
 
 __mod_name__ = "Filters 📜"
