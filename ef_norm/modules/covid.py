@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
 __help__ = """
 *කොරොනා:*
-• /covid - Latest Corona Virus Details.
+• /covid - අලුත්ම කොරෝනා තොරතුරු දැන ගැනීමට.
 • Using Our @efcovidbot
  
 """
