@@ -351,7 +351,7 @@ def ef_norm_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*හායි, මම {dispatcher.bot.first_name}  \n\nමම ටිනුර දිනිත් හදපු group management බොට් කෙනෙක්.* "
+            text=f"*හායි, මම [{dispatcher.bot.first_name}](https://t.me/efnormbot)* "
             f"\n\n මට පුළුවන් අනිත් බොට්ල වගේම Group Manage කරන්න. ඒ වගේම ඊටත් වඩා තවත් Features ගණනාවක් මට තියෙන්වා. පහළ Buttons වලින් තවත් විස්තර දැන ගන්න පුළුවන්.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
