@@ -453,12 +453,16 @@ def __stats__():
 
 __help__ = """
 ඔයාගේ group එකේ දාන සමහර වචන දාන එක නවත්තන්න මේක පාවිච්චි කරන්න පුළුවන්.
-*NOTE*: Blacklists do not affect group admins.
- • `/blacklist`*:* දැනට blacklisted කරපු වචන.
+*NOTE*: Blacklists adminලට් අදාළ නෑ
+ • /blacklist - දැනට blacklisted කරපු වචන.
 Admin only:
- • `/addblacklist <වචනය> - වචනයක් blacklist කරන්න.
- • `/unblacklist <triggers> - වචනයක් unblacklist කරන්න.
- • `/blacklistmode <off/del/warn/ban/kick/mute/tban/tmute> - Blacklisted වචන දැම්මාම දෙන දඩුවම.
+ • /addblacklist <වචනය> - වචනයක් blacklist කරන්න.
+ • /unblacklist <triggers> - වචනයක් unblacklist කරන්න.
+ • /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute> - Blacklisted වචන දැම්මාම දෙන දඩුවම.
+ • /addblsticker <reply sticker> - Sticker එකක් blacklist කරන්න.
+ • /unblsticker <reply sticker> - Sticker එකක් unblacklist කරන්න.
+ • /rmblsticker <reply sticker> - Sticker එකක් unblacklist කරන්නම තමා.
+ • /blstickermode <ban/tban/mute/tmute> - Blacklist කරපු stickers දැම්මාම දෙන දඩුවම.
 """
 BLACKLIST_HANDLER = DisableAbleCommandHandler(
     "blacklist", blacklist, pass_args=True, admin_ok=True
