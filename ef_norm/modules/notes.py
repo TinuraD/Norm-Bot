@@ -25,6 +25,7 @@ from telegram.utils.helpers import escape_markdown, mention_markdown
 
 import ef_norm.modules.sql.notes_sql as sql
 from ef_norm import DRAGONS, JOIN_LOGGER, LOGGER, SUPPORT_CHAT, dispatcher
+from ef_norm.modules.disable import DisableAbleCommandHandler
 from ef_norm.modules.helper_funcs.chat_status import connection_status, user_admin
 from ef_norm.modules.helper_funcs.handlers import MessageHandlerChecker
 from ef_norm.modules.helper_funcs.misc import build_keyboard, revert_buttons
@@ -521,7 +522,6 @@ __help__ = """
  ✪ /number *:* Will pull the note of that number in the list
 If you would like to retrieve the contents of a note without any formatting, use `/get <notename> noformat`. This can \
 be useful when updating a current note
-
 *Admins only:*
  ✪ /save <notename> <notedata>*:* saves notedata as a note with name notename
 A button can be added to a note by using standard markdown link syntax - the link should just be prepended with a \
@@ -538,7 +538,6 @@ A button can be added to a note by using standard markdown link syntax - the lin
  ✪ /clear <notename>*:* clear note with this name
  ✪ /removeallnotes*:* removes all notes from the group
  *Note:* Note names are case-insensitive, and they are automatically converted to lowercase before getting saved.
-
 """
 
 __mod_name__ = "Notes ✍️"
