@@ -5,7 +5,6 @@ from ef_norm import pbot
 from pyrogram.errors import RPCError
 
 import functools
-from typing import Callable, Coroutine, Dict, List, Tuple, Union
 
 def is_admin(func):
     @functools.wraps(func)
@@ -71,8 +70,3 @@ async def loltime(client, message):
     except RPCError as i:
         await lol.edit(i)
         return
-
-@pbot.on_message(
-    filters.command("start") & ~filters.edited & ~filters.bot)    
-async def lel(client, message):
-    lol = await message.reply("forward any file to get it without tag. \nCheck /help to know more")
