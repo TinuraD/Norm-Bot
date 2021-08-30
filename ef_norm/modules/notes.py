@@ -25,7 +25,6 @@ from telegram.utils.helpers import escape_markdown, mention_markdown
 
 import ef_norm.modules.sql.notes_sql as sql
 from ef_norm import DRAGONS, JOIN_LOGGER, LOGGER, SUPPORT_CHAT, dispatcher
-from ef_norm.modules.disable import DisableAbleCommandHandler
 from ef_norm.modules.helper_funcs.chat_status import connection_status, user_admin
 from ef_norm.modules.helper_funcs.handlers import MessageHandlerChecker
 from ef_norm.modules.helper_funcs.misc import build_keyboard, revert_buttons
