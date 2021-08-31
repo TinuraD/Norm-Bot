@@ -88,7 +88,7 @@ HELP_STRINGS = f"""
 • /help: Commands ටික දැන ගන්න.
 • /settings: සැකසුම් සදහා.
 
-පිටු 2 ක විධාන සදහන් වේ. ⬅️ ➡️ භාවිතා කරමින් හුවමාරු වෙන්න.
+පිටු 3 ක විධාන සදහන් වේ. ⬅️ ➡️ භාවිතා කරමින් හුවමාරු වෙන්න.
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
