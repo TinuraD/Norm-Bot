@@ -130,7 +130,7 @@ async def download_video(v_url):
         os.remove(f"{ytdl_data['id']}.mp4")
         
 __help__ = """
- - /yt <text>: perform a youtube search
- - /ytaudio <link> or /ytvideo <link>: Downlods a video or audio from a youtube video to the bots local server
+ • /yt <වචනේ>: perform a youtube search එකක් දාන්න.
+ • /ytaudio <link> or /ytvideo <link>: Youtube Video එකක් Download කරන්න.
 """
 __mod_name__ = "Youtube 🎞"
