@@ -1061,20 +1061,19 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 *Admins only:*
- ✪ /welcome <on/off>*:* welcome messages on/off කරන්න
- ✪ /welcome*:* වත්මන් welcome settings.
- ✪ /welcome noformat*:* වත්මන් welcome settings සරලව.
- ✪ /goodbye*:*  `/welcome` විධිහටමයි.
- ✪ /setwelcome <sometext>*:* ඔයා කැමති welcome message ඔයා කැමති එකක් හදා ගන්න.
- ✪ /setgoodbye <sometext>*:* ඔයා කැමති goodbye message ඔයා කැමති එකක් හදා ගන්න.
- ✪ /resetwelcome*:* සුපුරුදු welcome message එකට මාරු වෙන්න.
- ✪ /resetgoodbye*:* සුපුරුදු goodbye message එකට මාරු වෙන්න.
- ✪ /cleanwelcome <on/off>*:* අන්තිමට Join වුණු කෙනාගේ Welcome Message එක තියෙද්දී, පරණ එව්වා මකන්න.
- ✪ /welcomemutehelp*:* welcome mutes ගැන දැනගන්න.
- ✪ /cleanservice <on/off*:* joined/left කියලා Telegram වලින් එන message auto-delete වෙන්න.
-
+ • /welcome <on/off> - welcome messages on/off කරන්න
+ • /welcome - වත්මන් welcome settings.
+ • /welcome noformat - වත්මන් welcome settings සරලව.
+ • /goodbye - /welcome විදිහමයි. කෙනෙක් left වෙද්දි message එන එක.
+ • /setwelcome <sometext> - ඔයා කැමති welcome message ඔයා කැමති එකක් හදා ගන්න.
+ • /setgoodbye <sometext> - ඔයා කැමති goodbye message ඔයා කැමති එකක් හදා ගන්න.
+ • /resetwelcome - සුපුරුදු welcome message එකට මාරු වෙන්න.
+ • /resetgoodbye - සුපුරුදු goodbye message එකට මාරු වෙන්න.
+ • /cleanwelcome <on/off> - අන්තිමට Join වුණු කෙනාගේ Welcome Message එක තියෙද්දී, පරණ එව්වා මකන්න.
+ • /welcomemutehelp - welcome mutes ගැන දැනගන්න.
+ • /cleanservice <on/off - joined/left කියලා Telegram වලින් එන message auto-delete වෙන්න.
 *Welcome markdown:* 
- ✪ `/welcomehelp`*:* Welcome message හොදට හදන විදිහ දැන ගන්න.
+ • /welcomehelp - Welcome message හොදට හදන විදිහ දැන ගන්න.
 """
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members, new_member)
