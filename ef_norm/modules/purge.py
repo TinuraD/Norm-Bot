@@ -93,3 +93,12 @@ async def delete_messages(event):
     chat = await event.get_input_chat()
     del_message = [message, event.message]
     await event.client.delete_messages(chat, del_message)
+    
+    __help__ = """
+*Admin only:*
+ • /del - Reply කරපු message එක delete  කරන්න.
+ • /purge - Reply කරපු එකේ ඉදන් command එක දාපු තැන වෙනක් තියෙන message delete කරන්න.
+ • /purge <integer X> - deletes the replied message, and X messages following it if replied to a message.
+"""
+
+__mod_name__ = "Deleting  🗑"
