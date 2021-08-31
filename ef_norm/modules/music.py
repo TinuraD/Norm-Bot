@@ -76,12 +76,9 @@ async def song(client, message):
 
 
 __help__ = """
-@szrosebot🇱🇰
- *You can either enter just the song name or both the artist and song
-  name. *
- ❍ /song <songname artist(optional)>*:* uploads the song in it's best quality available
- ❍ /video <songname artist(optional)>*:* uploads the video song in it's best quality available
- ❍ /lyrics <song>*:* returns the lyrics of that song.
+ • /song <සින්දුව ගායකයා(අවශ්‍යනම්)>*:* සිදුවක් download කර ගන්න.
+ • /video <සින්දුව ගායකයා(අවශ්‍යනම්)>*:* සින්දුව  video එකක් විදිහට ගන්න.
+ • /lyrics <සින්දුව>*:* සින්දුවක lyrics ගන්න.
  
 """
 
