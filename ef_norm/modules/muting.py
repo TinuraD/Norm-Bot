@@ -368,14 +368,11 @@ def stemp_mute(update: Update, context: CallbackContext) -> str:
 
 __help__ = """
 *Admins only:*
- ✪ /mute <userhandle>*:* silences a user. Can also be used as a reply, muting the replied to user.
- ✪ /smute <userhandle>*:* silences a user without notifying. Can also be used as a reply, muting the replied to user.
- ✪ /tmute <userhandle> x(m/h/d)*:* mutes a user for x time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /stmute <userhandle> x(m/h/d)*:* mutes a user for x time without notifying. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
- ✪ /unmute <userhandle>*:* unmutes a user. Can also be used as a reply, muting the replied to user.
- 
- _NOTE:_
- If you set Log Channels, you will get logs of Silent mutes. Check *Logger* module to know more about Log Channel.
+ • /mute <userhandle> - User කෙනෙක් mute කරන්න. (via handle, or reply)
+ • /smute <userhandle> - කාටවත් නොදැනෙන්න user කෙනෙක් mute කරන්න. (via handle, or reply)
+ • /tmute <userhandle> x(m/h/d) - යම් කිසි කාලයක් සදහා කෙනෙක්ව mute කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+ • /stmute <userhandle> x(m/h/d) - කාටවත් නොදැනෙන්න යම් කිසි කාලයක් සදහා කෙනෙක්ව mute කරන්න. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+ • /unmute <userhandle> - User කෙනෙක් unmute කරන්න. (via handle, or reply)
 """
 
 MUTE_HANDLER = CommandHandler("mute", mute)
