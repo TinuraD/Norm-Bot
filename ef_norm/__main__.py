@@ -390,10 +390,10 @@ def ef_norm_about_callback(update, context):
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"අපේ මේ Norm Bot හදන්න ගොඩක් දෙනෙක්ගේ සහාය ලැබුණා. ඒ වගේම ගොඩක් දෙනක් ඉන්නවා ස්තූති කරන්න."
-            f"\n  • [Paul Larsen](https://github.com/PaulSonOfLars/tgbot)"
-            f"\n  • [Daisy Bot](https://t.me/DaisyXbot)"
+            text=f"අපේ මේ Norm Bot හැදෙන්නේ [Paul Larsen](https://github.com/PaulSonOfLars/tgbot) විසින් හදපු [tgbot](https://github.com/PaulSonOfLars/tgbot) Source code එකෙන්, කොහොම වුනත් ඒ source code එක Saitma robot හා Daisy Bot විසින් නැවත වතාවක් Modify කරනවා. අන්න ඒ Modify කරපු [Daisy Bot](https://t.me/DaisyXbot)ගෙන් තමා මේ Botව හදලා තියෙන්නෙත්, ඉතින් ඒ [Daisy Bot](https://t.me/DaisyXbot) ව ටිකක් Modify කරලා සිංහලට හරවපු එක තමා මම කරේ. ඊට අමතරව මේ Norm Bot ව හදන්න තව ගොඩක් දෙනෙක් ගේ සහාය ලැබුණා."
+            f"\n  • [TeamDaisyX](https://github.com/TeamDaisyX)"
             f"\n  • [SL Bot Zone](https://t.me/slbotzone)"
+            f"\n  • Max Robot"
             f"\nඒ අතරින් ප්‍රධානම අය තමා ඔය උඩින් සදහන් කරේ මීට අමතරව ගොඩක් දෙනෙක් මේ වැඩේට සහාය වුණා. ඒ හැමෝටම ස්තූතියි. 🙏 ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
