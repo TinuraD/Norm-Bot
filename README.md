@@ -15,9 +15,11 @@
 
 Other Credits
  - DaisyBot
+ - TeamDaisyX
  - Telethon
  - Pyrogram
  - MaxRobot
+ - SL Bot Zone
 
 ## Contributors
 
