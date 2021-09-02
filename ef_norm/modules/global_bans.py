@@ -34,7 +34,10 @@ from ef_norm.modules.helper_funcs.chat_status import (
     support_plus,
     user_admin,
 )
-from ef_norm.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from ef_norm.modules.helper_funcs.extraction import (
+    extract_user,
+    extract_user_and_text,
+)
 from ef_norm.modules.helper_funcs.misc import send_to_list
 from ef_norm.modules.sql.users_sql import get_user_com_chats
 
@@ -536,9 +539,8 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = f"""
 *Admins only:*
- • /antispam <on/off/yes/no>- Anti-Spam on/off කරන්න.
-
-Anti-Spam, used by bot devs to ban spammers across all groups. This helps protect.
+ • `/antispam <on/off/yes/no>`*:* Will toggle our antispam tech or return your current settings.
+Anti-Spam, used by bot devs to ban spammers across all groups. This helps protect \
 you and your groups by removing spam flooders as quickly as possible.
 *Note:* Users can appeal gbans or report spammers at @{SUPPORT_CHAT}
 This also integrates @Spamwatch API to remove Spammers as much as possible from your chatroom!
