@@ -1,3 +1,3 @@
-worker: python3 -m ef_norm
-web: python3 -m ef_norm
+worker: python3 -m normbot
+web: python3 -m normbot
 ps:scale worker=1
