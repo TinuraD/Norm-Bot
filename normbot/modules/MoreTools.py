@@ -7,7 +7,8 @@ __help__ = """
  • /cleanblue off : Turn bluetext cleaner off
  
  ** Send **
- • /snd <message> : Bot ගෙන් message දාන්න.
+ • /send <message> : Bot ගෙන් message දාන්න.
+ • /edit <reply to media> : File එකක media edit කරන්න.
  
 ** Grammer **
  • /t <reply> : Grammer හරි ගස්සන්න
