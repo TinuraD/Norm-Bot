@@ -83,7 +83,7 @@ async def profanity(event):
     input = event.pattern_match.group(2)
     if not event.sender_id == OWNER_ID:
         if not await is_register_admin(event.input_chat, event.sender_id):
-           await event.reply("Only admins can execute this command!")
+           await event.reply("මේ command එක දෙන්න පුලුවන් ඇඩ්මින්ලට් විතරයි.")
            return
         else:
           if not await can_change_info(message=dmod):
@@ -92,33 +92,33 @@ async def profanity(event):
     if not input:
         if is_nightmode_indb(str(event.chat_id)):
                 await event.reply(
-                    "Currently NightMode is Enabled for this Chat"
+                    "දැන් ඉදන් Night Mode එක වැඩ කරන්න පටන් ගත්තා"
                 )
                 return
         await event.reply(
-            "Currently NightMode is Disabled for this Chat"
+            "Night Mode එක භාවිතා කිරීම නවත්වන ලදී."
         )
         return
     if "on" in input:
         if event.is_group:
             if is_nightmode_indb(str(event.chat_id)):
                     await event.reply(
-                        "Night Mode is Already Turned ON for this Chat"
+                        "Night Mode කලින් ඉදන් ඔන් කරලා තියෙන්නේ."
                     )
                     return
             add_nightmode(str(event.chat_id))
-            await event.reply("NightMode turned on for this chat.")
+            await event.reply("NightMode එක ඔන් කරා.")
     if "off" in input:
         if event.is_group:
             if not is_nightmode_indb(str(event.chat_id)):
                     await event.reply(
-                        "Night Mode is Already Off for this Chat"
+                        "Night Mode කලින් ඉදන් ඕෆ් කරලා තියෙන්නේ."
                     )
                     return
         rmnightmode(str(event.chat_id))
-        await event.reply("NightMode Disabled!")
+        await event.reply("NightMode එක Disable කරා.")
     if not "off" in input and not "on" in input:
-        await event.reply("Please Specify On or Off!")
+        await event.reply("On හරි Off දෙන්න")
         return
 
 
@@ -129,7 +129,7 @@ async def job_close():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "12:00 Am, Group Is Closing Till 6 Am. Night Mode Started ! \n**Powered By @szrosebot🇱🇰**"
+              int(pro.chat_id), "මධ්‍යම රාත්‍රී 12:00 යි , දැනට කාටවත් message කරන්න බෑ, ආයේ උදේ 6.00 ඉදන් පුලුවන්."
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
