@@ -687,7 +687,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "normbot was updated By EF Bots ✅")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Norm was Updated ✅")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
