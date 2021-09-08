@@ -86,7 +86,8 @@ async def profanity(event):
            await event.reply("මේ command එක දෙන්න පුලුවන් ඇඩ්මින්ලට් විතරයි.")
            return
         else:
-          if await event.reply("You are missing the following rights to use this command:CanChangeinfo")
+          if not await can_change_info(message):
+            await event.reply("You are missing the following rights to use this command:CanChangeinfo")
             return
     if not input:
         if is_nightmode_indb(str(event.chat_id)):
@@ -171,4 +172,4 @@ __help__ = """
 Group එකේ ඉන්න අයට මධ්‍යම රාත්‍රී 12.00 සිට පෙරවරු 6.00 තෙක් message දන්න බැරි වෙන එක තමා මේකෙන් වෙන්නේ.
 """
 
-__mod_name__ = "Night mode 🌃"
+__mod_name__ = ""
