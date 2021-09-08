@@ -1,7 +1,7 @@
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from telethon import events, functions
 from telethon.tl.types import ChatBannedRights
-
+from normbot import bot
 bot_info = loop.run_until_complete(bot.get_me())
 BOT_ID = bot_info.id
 from DaisyX.function.telethonbasics import is_user_admin
