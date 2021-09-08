@@ -168,9 +168,8 @@ scheduler.start()
 
 
 __help__ = """
- ❍ /nightmode on/off
-**Note:** Night Mode chats get Automatically closed at 12pm(IST)
-and Automatically openned at 6am(IST) To Prevent Night Spams.
+ • /nightmode on/off
+Group එකේ ඉන්න අයට මධ්‍යම රාත්‍රී 12.00 සිට පෙරවරු 6.00 තෙක් message දන්න බැරි වෙන එක තමා මේකෙන් වෙන්නේ.
 """
 
 __mod_name__ = "Night mode 🌃"
