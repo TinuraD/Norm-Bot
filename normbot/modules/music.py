@@ -1,5 +1,5 @@
 import os
-from normbot import pbot
+from ef_norm import pbot
 from pyrogram import idle, filters
 import requests
 import youtube_dl
