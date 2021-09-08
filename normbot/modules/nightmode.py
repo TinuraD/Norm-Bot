@@ -86,7 +86,7 @@ async def profanity(event):
            await event.reply("මේ command එක දෙන්න පුලුවන් ඇඩ්මින්ලට් විතරයි.")
            return
         else:
-          if not await can_change_info(message):
+          if not await can_change_info(message="ok"):
             await event.reply("You are missing the following rights to use this command:CanChangeinfo")
             return
     if not input:
