@@ -1,4 +1,3 @@
-@run_async
 def normbot_more_callback(update, context):
     query = update.callback_query
     if query.data == "moretools_":
