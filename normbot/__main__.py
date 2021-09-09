@@ -68,7 +68,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmanu_more"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmanu_"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
@@ -391,9 +391,7 @@ def normbot_about_callback(update, context):
         
     elif query.data == "aboutmanu_more":
         query.message.edit_text(
-            text=f"භාවිතා කරන ආකාරය"
-            f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න."
-            f"",
+            text=moretools,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
