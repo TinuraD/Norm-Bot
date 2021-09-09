@@ -390,7 +390,7 @@ def normbot_about_callback(update, context):
         
     elif query.data == "aboutmenu_more":
         query.message.edit_text(
-            text=normbot.modules.moretools.mtool11,
+            text=modules.moretools.mtool11,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
