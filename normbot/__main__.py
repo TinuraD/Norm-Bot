@@ -57,6 +57,7 @@ from normbot import (
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from normbot.modules import ALL_MODULES
+from normbot.modules import moretools
 from normbot.functions.alternate import typing_action
 from normbot.functions.chat_status import is_user_admin
 from normbot.functions.misc import paginate_modules
@@ -390,7 +391,7 @@ def normbot_about_callback(update, context):
         
     elif query.data == "aboutmenu_more":
         query.message.edit_text(
-            text=modules.moretools.mtool11,
+            text=moretools,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
