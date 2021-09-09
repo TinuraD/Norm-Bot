@@ -369,7 +369,7 @@ def normbot_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "moretools_":
+    elif query.data == "aboutmanu_back":
         query.message.edit_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -377,10 +377,9 @@ def normbot_about_callback(update, context):
             timeout=60,
         )
         
-    elif query.data == "aboutmanu_back":
+    elif query.data == "moretools":
         query.message.edit_text(
-            PM_START_TEXT,
-            reply_markup=InlineKeyboardMarkup(buttons),
+            moretool,
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
         )    
@@ -695,7 +694,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Norm was Updated ✅")
+            dispatcher.bot.sendMessage(f"@tinurad", "Norm was Updated ✅")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
