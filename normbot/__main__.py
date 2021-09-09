@@ -83,7 +83,7 @@ buttons = [
 
 
 HELP_STRINGS = f"""
-*ප්‍රධාන Commands :* 
+*ප්‍රධාන Commands* 
 • /start- මාව start කරන්න
 • /help - ommands ටික දැන ගන්න.
 • /settings - සැකසුම් සදහා.
@@ -377,7 +377,7 @@ def normbot_about_callback(update, context):
             timeout=60,
         )
         
-    elif query.data == "moretools":
+    elif query.data == "moretools_":
         query.message.edit_text(
             moretool,
             parse_mode=ParseMode.MARKDOWN,
@@ -694,7 +694,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@tinurad", "Norm was Updated ✅")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Norm was Updated ✅")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
