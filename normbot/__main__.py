@@ -379,10 +379,11 @@ def normbot_about_callback(update, context):
         
     elif query.data == "moretools_":
         query.message.edit_text(
-            moretool,
+            PM_START_TEXT,
+            reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
-        )    
+        )  
 
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
