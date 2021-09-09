@@ -388,7 +388,7 @@ def normbot_about_callback(update, context):
             ),
         )
         
-    elif query.data == "aboutmenu_howto":
+    elif query.data == "aboutmenu_more":
         query.message.edit_text(
             text=f"භාවිතා කරන",
             parse_mode=ParseMode.MARKDOWN,
