@@ -15,10 +15,12 @@
 
 Other Credits
  - DaisyBot
+ - Saitma Robot
  - TeamDaisyX
  - Telethon
  - Pyrogram
  - MaxRobot
+ - SZ Rose Bot
  - SL Bot Zone
 
 ## Contributors
