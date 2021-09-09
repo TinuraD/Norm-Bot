@@ -389,11 +389,9 @@ def normbot_about_callback(update, context):
             ),
         )
         
-    elif query.data == "aboutmanu_more":
+    elif query.data == "aboutmenu_more":
         query.message.edit_text(
             text=moretools,
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
             ),
