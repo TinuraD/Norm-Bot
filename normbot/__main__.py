@@ -68,7 +68,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmanu_"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="moretools_"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
@@ -370,14 +370,6 @@ def normbot_about_callback(update, context):
             ),
         )
     elif query.data == "aboutmanu_back":
-        query.message.edit_text(
-            PM_START_TEXT,
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-        )
-        
-    elif query.data == "moretools_":
         query.message.edit_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
