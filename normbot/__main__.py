@@ -84,9 +84,9 @@ buttons = [
 
 HELP_STRINGS = f"""
 *ප්‍රධාන Commands :* 
-• /start: මාව start කරන්න
-• /help: Commands ටික දැන ගන්න.
-• /settings: සැකසුම් සදහා.
+• /start- මාව start කරන්න
+• /help - ommands ටික දැන ගන්න.
+• /settings - සැකසුම් සදහා.
 
 පිටු 3 ක විධාන සදහන් වේ. ⬅️ ➡️ භාවිතා කරමින් හුවමාරු වෙන්න.
 """.format(
