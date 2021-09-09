@@ -68,7 +68,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_more"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
@@ -380,8 +380,7 @@ def normbot_about_callback(update, context):
     elif query.data == "aboutmenu_howto":
         query.message.edit_text(
             text=f"භාවිතා කරන ආකාරය"
-            f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න."
-            f"",
+            f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -389,14 +388,15 @@ def normbot_about_callback(update, context):
             ),
         )
         
-    elif query.data == "aboutmenu_more":
+    elif query.data == "aboutmenu_howto":
         query.message.edit_text(
-            text=f"ok",
+            text=f"භාවිතා කරන",
             parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
             ),
-        )    
+        ) 
     
     elif query.data == "aboutmenu_credit":
         query.message.edit_text(
