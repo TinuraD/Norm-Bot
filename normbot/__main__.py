@@ -388,6 +388,19 @@ def normbot_about_callback(update, context):
                 [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
             ),
         )
+        
+    elif query.data == "moretools_":
+        query.message.edit_text(
+            text=f"භාවිතා කරන ආකාරය"
+            f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න."
+            f"",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
+            ),
+        )
+    
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
             text=f"අපේ මේ normbot Bot හැදෙන්නේ [Paul Larsen](https://github.com/PaulSonOfLars/tgbot) විසින් හදපු [tgbot](https://github.com/PaulSonOfLars/tgbot) Source code එකෙන්, කොහොම වුනත් ඒ source code එක Saitma robot හා Daisy Bot විසින් නැවත වතාවක් Modify කරනවා. අන්න ඒ Modify කරපු [Daisy Bot](https://t.me/DaisyXbot)ගෙන් තමා මේ Botව හදලා තියෙන්නෙත්, ඉතින් ඒ [Daisy Bot](https://t.me/DaisyXbot) ව ටිකක් Modify කරලා සිංහලට හරවපු එක තමා මම කරේ. ඊට අමතරව මේ normbot Bot ව හදන්න තව ගොඩක් දෙනෙක් ගේ සහාය ලැබුණා."
