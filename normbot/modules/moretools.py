@@ -26,3 +26,13 @@ moretool = f"""
 ** More **
  - /phone <Phone නම්බරේ> : Phone නම්බර් Track කරන්න.
 """
+
+
+def normbot_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "moretools_":
+        query.message.edit_text(
+            moretool,
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+        )
