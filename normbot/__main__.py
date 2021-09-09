@@ -68,7 +68,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmanu_"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
@@ -349,7 +349,7 @@ def help_button(update, context):
 @run_async
 def normbot_about_callback(update, context):
     query = update.callback_query
-    if query.data == "aboutmanu_":
+    if query.data == "aboutmenu_":
         query.message.edit_text(
             text=f"හායි, මම [normbot](https://t.me/efnormbot)"
             f"\n\n මට පුළුවන් අනිත් බොට්ල වගේම Group Manage කරන්න. ඒ වගේම ඊටත් වඩා තවත් Features ගණනාවක් මට තියෙන්වා. පහළ Buttons වලින් තවත් විස්තර දැන ගන්න පුළුවන්.",
@@ -359,17 +359,17 @@ def normbot_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="උදවු 📔", callback_data="aboutmanu_howto"
+                            text="උදවු 📔", callback_data="aboutmenu_howto"
                         ),
                         InlineKeyboardButton(
-                            text="ස්තූතිය 🙏", callback_data="aboutmanu_credit"
+                            text="ස්තූතිය 🙏", callback_data="aboutmenu_credit"
                         ),
                     ],
-                    [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_back")],
                 ]
             ),
         )
-    elif query.data == "aboutmanu_back":
+    elif query.data == "aboutmenu_back":
         query.message.edit_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -377,7 +377,7 @@ def normbot_about_callback(update, context):
             timeout=60,
         )  
 
-    elif query.data == "aboutmanu_howto":
+    elif query.data == "aboutmenu_howto":
         query.message.edit_text(
             text=f"භාවිතා කරන ආකාරය"
             f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න."
@@ -385,7 +385,7 @@ def normbot_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
             ),
         )
         
@@ -394,11 +394,11 @@ def normbot_about_callback(update, context):
             text=f"ok",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
             ),
         )    
     
-    elif query.data == "aboutmanu_credit":
+    elif query.data == "aboutmenu_credit":
         query.message.edit_text(
             text=f"අපේ මේ normbot Bot හැදෙන්නේ [Paul Larsen](https://github.com/PaulSonOfLars/tgbot) විසින් හදපු [tgbot](https://github.com/PaulSonOfLars/tgbot) Source code එකෙන්, කොහොම වුනත් ඒ source code එක Saitma robot හා Daisy Bot විසින් නැවත වතාවක් Modify කරනවා. අන්න ඒ Modify කරපු [Daisy Bot](https://t.me/DaisyXbot)ගෙන් තමා මේ Botව හදලා තියෙන්නෙත්, ඉතින් ඒ [Daisy Bot](https://t.me/DaisyXbot) ව ටිකක් Modify කරලා සිංහලට හරවපු එක තමා මම කරේ. ඊට අමතරව මේ normbot Bot ව හදන්න තව ගොඩක් දෙනෙක් ගේ සහාය ලැබුණා."
             f"\n  • [TeamDaisyX](https://github.com/TeamDaisyX)"
@@ -408,7 +408,7 @@ def normbot_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmanu_")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
             ),
         )
 @run_async
@@ -715,7 +715,7 @@ def main():
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
     about_callback_handler = CallbackQueryHandler(
-        normbot_about_callback, pattern=r"aboutmanu_"
+        normbot_about_callback, pattern=r"aboutmenu_"
     )
 
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
