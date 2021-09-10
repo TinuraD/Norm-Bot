@@ -497,8 +497,7 @@ def get_help(update, context):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="
-                                       ")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="help_back")]]
             ),
         )
 
