@@ -57,7 +57,6 @@ from normbot import (
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from normbot.modules import ALL_MODULES
-from normbot.modules import moretools
 from normbot.functions.alternate import typing_action
 from normbot.functions.chat_status import is_user_admin
 from normbot.functions.misc import paginate_modules
