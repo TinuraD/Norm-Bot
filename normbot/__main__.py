@@ -68,7 +68,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_more"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
