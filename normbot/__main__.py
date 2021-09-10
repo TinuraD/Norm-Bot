@@ -390,7 +390,7 @@ def normbot_about_callback(update, context):
         
     elif query.data == "aboutmenu_more":
         query.message.edit_text(
-            text=moretools = f"""
+            text=f"""
 ** GPS **
  • /gps <හොයන්න ඕන තැන>  - අපි දෙන තැන Map එක බලන්න.
  
