@@ -55,3 +55,4 @@ wget
 fake-useragent
 asyncio
 apscheduler
+loguru
