@@ -26,7 +26,7 @@ from typing import Dict, Union
 from pyrogram import filters
 
 from DaisyX.db.mongo_helpers.karma import is_karma_on, karma_off, karma_on
-from normbot.function import member_permissions
+from normbot.function.pluginhelpers import member_permissions
 from DaisyX.services.mongo2 import db
 from normbot import pbot as app
 
