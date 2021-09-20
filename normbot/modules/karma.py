@@ -2,7 +2,7 @@ from normbot import pbot
 import random
 from normbot.functions.karmafunc import (alpha_to_int, get_karma, get_karmas,
                                    int_to_alpha, is_karma_on, karma_off,
-                                   karma_on, update_karm,section)
+                                   karma_on, update_karma,section)
 from pyrogram import filters
 
 karma_positive_group = 3
