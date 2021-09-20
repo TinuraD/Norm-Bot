@@ -7,10 +7,10 @@ from normbot.function.dbfun import (
     int_to_alpha,
     alpha_to_int,
 )
-from normbot.utils.filter_groups import karma_positive_group, karma_negative_group
 from pyrogram import filters
 
-
+karma_positive_group = 3
+karma_negative_group = 4
 regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|pro|cool|good|👍)$"
 regex_downvote = r"^(\-|\-\-|\-1|👎)$"
 
