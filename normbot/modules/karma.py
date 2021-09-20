@@ -89,7 +89,7 @@ async def downvote(_, message):
 
 
 @pbot.on_message(filters.command("karma") & filters.group)
-aasync def command_karma(_, message):
+async def command_karma(_, message):
     chat_id = message.chat.id
     if not message.reply_to_message:
         m = await message.reply_text("Analyzing Karma...")
