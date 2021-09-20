@@ -86,7 +86,7 @@ async def karma(_, message):
     if not message.reply_to_message:
         karma = await get_karmas(chat_id)
         msg = f"**Karma list of {message.chat.title}:- **\n"
-        limit = 0
+        limit = 10
         karma_dicc = {}
         for i in karma:
             user_id = await alpha_to_int(i)
