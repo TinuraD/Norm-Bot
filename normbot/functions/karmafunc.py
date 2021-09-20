@@ -14,7 +14,7 @@ from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
 from normbot import OWNER_ID
-from normbot.modules.admin import member_permissions
+from normbot.functions.chat_status import is_user_admin
 
 
 client = MongoClient()
@@ -210,9 +210,8 @@ def adminsOnly(permission):
                     )
                 return await unauthorised(message, permission, subFunc2)
             # For admins and sudo users
-            userID = message.from_user.id
-            permissions = await member_permissions(chatID, userID)
-            if userID not in OWNER_ID and permission not in permissions:
+            userID = message.from_user.i
+            if userID not in OWNER_ID and is_user_admin not in is_user_admin:
                 return await unauthorised(message, permission, subFunc2)
             return await authorised(
                 func, subFunc2, client, message, *args, **kwargs
