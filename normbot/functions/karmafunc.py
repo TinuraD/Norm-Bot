@@ -67,6 +67,11 @@ async def get_karma(chat_id: int, name: str) -> Union[bool, dict]:
     if name in karmas:
         return karmas[name]
 
+async def is_karma_on(chat_id: int) -> bool:
+    chat = await karmadb.find_one({"chat_id_toggle": chat_id})
+    if not chat:
+        return True
+    return False    
 
 async def update_karma(chat_id: int, name: str, karma: dict):
     name = name.lower().strip()
