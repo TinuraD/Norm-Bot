@@ -1,6 +1,6 @@
 from normbot import pbot 
 import random
-from normbot.function.dbfun import (
+from normbot.functions.mongo import (
     update_karma,
     get_karma,
     get_karmas,
