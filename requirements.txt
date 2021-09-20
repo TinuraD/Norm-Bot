@@ -56,3 +56,4 @@ fake-useragent
 asyncio
 apscheduler
 loguru
+pymongo
