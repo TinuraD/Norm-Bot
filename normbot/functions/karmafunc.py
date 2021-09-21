@@ -87,14 +87,12 @@ async def is_karma_on(chat_id: int) -> bool:
 async def karma_off(chat_id: int):
     is_karma = await is_karma_on(chat_id)
     if not is_karma:
-        return
-    return await karmadb.insert_one({"chat_id_toggle": chat_id})
+        return karmadb.insert_one({"chat_id_toggle": chat_id})
 
 async def karma_on(chat_id: int):
     is_karma = await is_karma_on(chat_id)
     if is_karma:
-        return
-    return await karmadb.delete_one({"chat_id_toggle": chat_id})
+        return karmadb.delete_one({"chat_id_toggle": chat_id})
 
 async def update_karma(chat_id: int, name: str, karma: dict):
     name = name.lower().strip()
@@ -109,8 +107,6 @@ async def update_karma(chat_id: int, name: str, karma: dict):
     karmas = await get_karmas(chat_id)
     karmas[name] = karma
     karmadb.update_one({"chat_id": chat_id}, {"$set": {"karma": karmas}}, upsert=True)
-
-
 
 
 
