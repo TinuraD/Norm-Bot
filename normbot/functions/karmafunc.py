@@ -221,6 +221,16 @@ def adminsOnly(permission):
 
     return subFunc
 
+async def get_user_id_and_usernames(client) -> dict:
+    with client.storage.lock, client.storage.conn:
+        users = client.storage.conn.execute(
+            'SELECT * FROM peers WHERE type in ("user", "bot") AND username NOT null'
+        ).fetchall()
+    users_ = {}
+    for user in users:
+        users_[user[0]] = user[3]
+    return users_
+
 n = "\n"
 w = " "
 
