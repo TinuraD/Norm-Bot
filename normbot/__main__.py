@@ -394,10 +394,6 @@ def normbot_about_callback(update, context):
 ** GPS **
  • /gps <හොයන්න ඕන තැන>  - අපි දෙන තැන Map එක බලන්න.
  
- ** Blue Cleaner **
- • /cleanblue on : Turn bluetext cleaner on
- • /cleanblue off : Turn bluetext cleaner off
- 
  ** Send **
  • /send <message> : Bot ගෙන් message දාන්න.
  • /edit <reply to media> : File එකක media edit කරන්න.
@@ -414,9 +410,6 @@ def normbot_about_callback(update, context):
  • /weebify : Weebify Text
  • /square : square Text
  • /blue : Blues text
- 
-** More **
- - /phone <Phone නම්බරේ> : Phone නම්බර් Track කරන්න.
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
