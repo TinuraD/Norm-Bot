@@ -178,9 +178,6 @@ def adminsOnly(permission):
                     )
                 return await unauthorised(message, permission, subFunc2)
             # For admins and sudo users
-            userID = message.from_user.id
-            if userID not in OWNER_ID:
-                return await unauthorised(message, permission, subFunc2)
             return await authorised(
                 func, subFunc2, client, message, *args, **kwargs
             )
