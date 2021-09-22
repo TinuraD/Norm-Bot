@@ -154,7 +154,7 @@ def capture_err(func):
                 ),
             )
             for x in error_feedback:
-                await app.send_message(JOIN_LOGGER, x)
+                await pbot.send_message(JOIN_LOGGER, x)
             raise err
 
     return capture
@@ -164,7 +164,7 @@ async def authorised(func, subFunc2, client, message, *args, **kwargs):
     try:
         await func(client, message, *args, **kwargs)
     except ChatWriteForbidden:
-        await app.leave_chat(chatID)
+        await pbot.leave_chat(chatID)
     except Exception as e:
         try:
             await message.reply_text(str(e.MESSAGE))
