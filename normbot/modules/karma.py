@@ -1,5 +1,4 @@
 from normbot import pbot as app
-import random
 import re
 from normbot.functions.karmafunc import (alpha_to_int, get_karma, get_karmas,
                                    int_to_alpha, is_karma_on, karma_off,
