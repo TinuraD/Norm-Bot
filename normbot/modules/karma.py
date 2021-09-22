@@ -1,5 +1,3 @@
-
-import tracemalloc
 from normbot import pbot as app
 import re
 from normbot.functions.karmafunc import (alpha_to_int, get_karma, get_karmas,
@@ -158,7 +156,7 @@ async def captcha_state(_, message):
     state = message.text.split(None, 1)[1].strip()
     state = state.lower()
     if state == "enable":
-        await karma_on(chat_id)
+        karma_on(chat_id)
         await message.reply_text("Enabled karma system.")
     elif state == "disable":
         await karma_off(chat_id)
@@ -166,4 +164,3 @@ async def captcha_state(_, message):
     else:
         await message.reply_text(usage)
         
-tracemalloc.start()        
