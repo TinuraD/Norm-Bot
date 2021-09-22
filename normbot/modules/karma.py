@@ -159,7 +159,7 @@ async def captcha_state(_, message):
         await karma_on(chat_id)
         await message.reply_text("Enabled karma system.")
     elif state == "disable":
-        await karma_off(chat_id)
+        karma_off(chat_id)
         await message.reply_text("Disabled karma system.")
     else:
         await message.reply_text(usage)
