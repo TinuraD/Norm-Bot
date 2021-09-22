@@ -7,8 +7,17 @@ from pyrogram import filters
 
 karma_positive_group = 3
 karma_negative_group = 4
-regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|pro|cool|good|👍)$"
-regex_downvote = r"^(\-|\-\-|\-1|👎)$"
+
+__MODULE__ = "Karma"
+__HELP__ = """[UPVOTE] - Use upvote keywords like "+", "+1", "thanks" etc to upvote a message.
+[DOWNVOTE] - Use downvote keywords like "-", "-1", etc to downvote a message.
+/karma_toggle [ENABLE|DISABLE] - Enable or Disable Karma System In Your Chat.
+Reply to a message with /karma to check a user's karma
+Send /karma without replying to any message to chek karma list of top 10 users"""
+
+
+regex_upvote = r"^(\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|pro|cool|good|👍|\+\+ .+)$"
+regex_downvote = r"^(-|--|-1|👎|-- .+)$"
 
 
 @pbot.on_message(
@@ -16,7 +25,7 @@ regex_downvote = r"^(\-|\-\-|\-1|👎)$"
     & filters.group
     & filters.incoming
     & filters.reply
-    & filters.regex(regex_upvote)
+    & filters.regex(regex_upvote, re.IGNORECASE)
     & ~filters.via_bot
     & ~filters.bot
     & ~filters.edited,
@@ -54,7 +63,7 @@ async def upvote(_, message):
     & filters.group
     & filters.incoming
     & filters.reply
-    & filters.regex(regex_downvote)
+    & filters.regex(regex_downvote, re.IGNORECASE)
     & ~filters.via_bot
     & ~filters.bot
     & ~filters.edited,
@@ -112,7 +121,7 @@ async def command_karma(_, message):
             )
         if not karma_dicc:
             return await m.edit("No karma in DB for this chat.")
-        userdb = await get_user_id_and_usernames(pbot)
+        userdb = await get_user_id_and_usernames(app)
         karma = {}
         for user_idd, karma_count in karma_arranged.items():
             if limit > 15:
@@ -135,14 +144,8 @@ async def command_karma(_, message):
         else:
             karma = 0
             await message.reply_text(f"**Total Points**: __{karma}__")
-            
-            
-            
-TEXT = ("Added This Chat To Database. Karma will be enabled here",
-        "Removed This Chat To Database. Karma will be disabled here"   
-       )
-        
-                       
+
+
 @pbot.on_message(filters.command("karma_toggle") & ~filters.private)
 async def captcha_state(_, message):
     usage = "**Usage:**\n/karma_toggle [ENABLE|DISABLE]"
@@ -159,13 +162,3 @@ async def captcha_state(_, message):
         await message.reply_text("Disabled karma system.")
     else:
         await message.reply_text(usage)
-        
-
-__help__ = """
-[UPVOTE] - Use upvote keywords like "+", "+1", "thanks" etc to upvote a cb.message.
-[DOWNVOTE] - Use downvote keywords like "-", "-1", etc to downvote a cb.message.
-❍ /karma[ON/OFF]: Enable/Disable karma in group. (don't give space)
-❍ /karma [Reply to a message]: Check user's karma
-❍ /karma: Chek karma list of top 10 users
-"""
-__mod_name__ = "Karma"  
