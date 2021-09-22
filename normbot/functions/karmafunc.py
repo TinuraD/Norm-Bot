@@ -21,7 +21,6 @@ client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
 db = client["normbot"]
 
-coupledb = db.couple
 karmadb = db.karma
 
 async def get_karmas_count() -> dict:
@@ -139,9 +138,9 @@ async def authorised(func, subFunc2, client, message, *args, **kwargs):
         await pbot.leave_chat(chatID)
     except Exception as e:
         try:
-            await message.reply_text(str(e.MESSAGE))
+            message.reply_text(str(e.MESSAGE))
         except AttributeError:
-            await message.reply_text(str(e))
+            message.reply_text(str(e))
         e = err()
         print(str(e))
     return subFunc2
