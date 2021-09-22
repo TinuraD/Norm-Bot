@@ -47,25 +47,25 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-@telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
-async def zombies(event):
-    """ For .zombies command, list all the zombies in a chat. """
+@telethn.on(events.NewMessage(pattern=f"^[!/]ghost ?(.*)"))
+async def ghost(event):
+    """ For .ghost command, list all the ghost in a chat. """
 
     con = event.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "No Deleted Accounts Found, Group Is Clean."
+    del_status = "ඩිලීට් කරන ලද අකවුන්ට් නොමැත."
 
     if con != "clean":
-        find_zombies = await event.respond("Searching For Zombies...")
+        find_ghost = await event.respond("ඩිලීට් කරල ලද අකවුන්ට් සොයමින්")
         async for user in event.client.iter_participants(event.chat_id):
 
             if user.deleted:
                 del_u += 1
                 await sleep(1)
         if del_u > 0:
-            del_status = f"Found **{del_u}** Zombies In This Group.\
-            \nClean Them By Using - `/zombies clean`"
-        await find_zombies.edit(del_status)
+            del_status = f" **{del_u}** මකා දමන අකවුන්ට් එකක් හමුවුණා.\
+            \nඔවුන් ඉවත් කිරීමට /ghost clean විධානය භාවිතා කරන්න."
+        await find_ghost.edit(del_status)
         return
 
     # Here laying the sanity check
@@ -75,14 +75,14 @@ async def zombies(event):
 
     # Well
     if not await is_administrator(user_id=event.from_id, message=event):
-        await event.respond("You're Not An Admin!")
+        await event.respond("ඔයා ඇඩ්මින් කෙනෙක් නෙමේ.")
         return
 
     if not admin and not creator:
-        await event.respond("I Am Not An Admin Here!")
+        await event.respond("මම ඇඩ්මින් කෙනෙක් නෙමේ.")
         return
 
-    cleaning_zombies = await event.respond("Cleaning Zombies...")
+    cleaning_ghost = await event.respond("ඩිලීට් කරන ලද අකවුන්ට් මකමින්....")
     del_u = 0
     del_a = 0
 
@@ -93,7 +93,7 @@ async def zombies(event):
                     EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                await cleaning_zombies.edit("I Don't Have Ban Rights In This Group.")
+                await cleaning_ghost.edit("මට මේ group එකේ අයව බෑන් කරන්න අවසට නෑ.")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
@@ -102,10 +102,10 @@ async def zombies(event):
             del_u += 1
 
     if del_u > 0:
-        del_status = f"Cleaned `{del_u}` Zombies"
+        del_status = f"ඩිලීට් කරන ලද අකවුන්ට් `{del_u}` ක් මකා දමන ලදී."
 
     if del_a > 0:
-        del_status = f"Cleaned `{del_u}` Zombies \
-        \n`{del_a}` Zombie Admin Accounts Are Not Removed!"
+        del_status = f"ඩිලීට් කරන ලද අකවුන්ට් `{del_u}` ක් මකා දමන ලදී. \
+        \n`{del_a}` ඇඩ්මින් ලෙස තිබෙන ඩිලීට් කරපු අකවුන්ට් ඉවත් කරේ නෑ."
 
-    await cleaning_zombies.edit(del_status)
+    await cleaning_ghost.edit(del_status)
