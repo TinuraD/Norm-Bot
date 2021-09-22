@@ -47,25 +47,25 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-@telethn.on(events.NewMessage(pattern=f"^[!/]ghost ?(.*)"))
-async def ghost(event):
-    """ For .ghost command, list all the ghost in a chat. """
+@telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
+async def zombies(event):
+    """ For .zombies command, list all the zombies in a chat. """
 
     con = event.pattern_match.group(1).lower()
     del_u = 0
     del_status = "No Deleted Accounts Found, Group Is Clean."
 
     if con != "clean":
-        find_ghost = await event.respond("Searching For ghost...")
+        find_zombies = await event.respond("Searching For Zombies...")
         async for user in event.client.iter_participants(event.chat_id):
 
             if user.deleted:
                 del_u += 1
                 await sleep(1)
         if del_u > 0:
-            del_status = f"Found **{del_u}** ghost In This Group.\
-            \nClean Them By Using - `/ghost clean`"
-        await find_ghost.edit(del_status)
+            del_status = f"Found **{del_u}** Zombies In This Group.\
+            \nClean Them By Using - `/zombies clean`"
+        await find_zombies.edit(del_status)
         return
 
     # Here laying the sanity check
@@ -82,7 +82,7 @@ async def ghost(event):
         await event.respond("I Am Not An Admin Here!")
         return
 
-    cleaning_ghost = await event.respond("Cleaning ghost...")
+    cleaning_zombies = await event.respond("Cleaning Zombies...")
     del_u = 0
     del_a = 0
 
@@ -93,7 +93,7 @@ async def ghost(event):
                     EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                await cleaning_ghost.edit("I Don't Have Ban Rights In This Group.")
+                await cleaning_zombies.edit("I Don't Have Ban Rights In This Group.")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
@@ -102,10 +102,10 @@ async def ghost(event):
             del_u += 1
 
     if del_u > 0:
-        del_status = f"Cleaned `{del_u}` ghost"
+        del_status = f"Cleaned `{del_u}` Zombies"
 
     if del_a > 0:
-        del_status = f"Cleaned `{del_u}` ghost \
-        \n`{del_a}` Ghost Admin Accounts Are Not Removed!"
+        del_status = f"Cleaned `{del_u}` Zombies \
+        \n`{del_a}` Zombie Admin Accounts Are Not Removed!"
 
-    await cleaning_ghost.edit(del_status)
+    await cleaning_zombies.edit(del_status)
