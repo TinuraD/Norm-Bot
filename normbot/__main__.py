@@ -38,7 +38,6 @@ from normbot import (
     ALLOW_EXCL,
     BL_CHATS,
     CERT_PATH,
-    DONATION_LINK,
     LOGGER,
     OWNER_ID,
     PORT,
