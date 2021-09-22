@@ -14,7 +14,7 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 
-from normbot.events import register as saitama
+from normbot.events import register
 
 
 @register(pattern="^/yt(audio|video) (.*)")
@@ -130,7 +130,9 @@ async def download_video(v_url):
         os.remove(f"{ytdl_data['id']}.mp4")
         
 __help__ = """
- • /yt <වචනේ>: perform a youtube search එකක් දාන්න.
- • /ytaudio <link> or /ytvideo <link>: Youtube Video එකක් Download කරන්න.
+ • /yt <වචනේ> - perform a youtube search එකක් දාන්න.
+ • /ytvideo <link> - Youtube video එකක් video එකක් විදිහට download කරන්න.
+ • /ytaudio <link> - Youtube video එකක් audio එකක් විදිහට download කරන්න.
+ • /video <Video එකේ නම> - දීපු නමට අදාල youtube video එක download කරන්න
 """
 __mod_name__ = "Youtube 🎞"
