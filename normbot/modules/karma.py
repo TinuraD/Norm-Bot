@@ -32,7 +32,6 @@ regex_downvote = r"^(-|--|-1|👎|-- .+)$"
     & ~filters.edited,
     group=karma_positive_group,
 )
-@capture_err
 async def upvote(_, message):
     if not await is_karma_on(message.chat.id):
         return
