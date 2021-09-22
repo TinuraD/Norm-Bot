@@ -714,9 +714,9 @@ def is_chat_allowed(update, context):
 
 def main():
 
-    if OWNER_ID is not None and isinstance(OWNER_ID, str):
+    if OWNER_USERNAME is not None and isinstance(OWNER_USERNAME, str):
         try:
-            dispatcher.bot.sendMessage(f"@{OWNER_ID}", "Norm was Updated ✅")
+            dispatcher.bot.sendMessage(f"@{OWNER_USERNAME}", "Norm was Updated ✅")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
