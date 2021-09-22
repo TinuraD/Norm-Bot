@@ -3,8 +3,6 @@ from __future__ import unicode_literals
 import asyncio
 import math
 import os
-import sys
-from envparse import env
 import time
 import wget
 from random import randint
@@ -19,25 +17,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import *
 from youtube_search import YoutubeSearch
-
-
 from normbot import pbot
-from normbot.utils.logger import log
-
-
-def get_str_key(name, required=False):
-    if name in DEFAULTS:
-        default = DEFAULTS[name]
-    else:
-        default = None
-    if not (data := env.str(name, default=default)) and not required:
-        log.warn("No str key: " + name)
-        return None
-    elif not data:
-        log.critical("No str key: " + name)
-        sys.exit(2)
-    else:
-        return data
 
 @pbot.on_message(filters.command(["vsong"]))
 async def vsong(pbot, message):
