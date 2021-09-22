@@ -19,7 +19,7 @@ from pyrogram.types import *
 from youtube_search import YoutubeSearch
 from normbot import pbot
 
-@pbot.on_message(filters.command(["vsong"]))
+@pbot.on_message(filters.command(["vsong"],["video"]))
 async def vsong(pbot, message):
     ydl_opts = {
         'format':'best',
@@ -45,14 +45,14 @@ async def vsong(pbot, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **downloading video...**")
+        msg = await message.reply("📥 සින්දුව download කරමින්...")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
-        return await msg.edit(f"🚫 **error:** {str(e)}")
+        return await msg.edit(f"❌ දොෂයක් ඇති විය. {str(e)}")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 **uploading video...**")
+    await msg.edit("📥 සින්දුව upload කරමින්...")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
