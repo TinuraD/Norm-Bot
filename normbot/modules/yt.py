@@ -63,7 +63,7 @@ async def download_video(v_url):
         song = False
         video = True
     try:
-        await lmao.edit("`Fetching data, please wait..`")
+        await lmao.edit("🔎 හොයමින්...")
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(url)
     except DownloadError as DE:
@@ -78,13 +78,13 @@ async def download_video(v_url):
         )
         return
     except MaxDownloadsReached:
-        await lmao.edit("`Max-downloads limit has been reached.`")
+        await lmao.edit("උපරිම downloads වාර ගණන ඉක්මවා ඇත.")
         return
     except PostProcessingError:
-        await lmao.edit("`There was an error during post processing.`")
+        await lmao.edit("❌ දෝෂයක් ඇති විය.")
         return
     except UnavailableVideoError:
-        await lmao.edit("`Media is not available in the requested format.`")
+        await lmao.edit("Media is not available in the requested format.")
         return
     except XAttrMetadataError as XAME:
         await lmao.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
@@ -98,9 +98,8 @@ async def download_video(v_url):
     time.time()
     if song:
         await lmao.edit(
-            f"`Preparing to upload song:`\
-        \n**{ytdl_data['title']}**\
-        \nby *{ytdl_data['uploader']}*"
+            f"උඩුගත කිරීමට සකසමින්\
+        \n{ytdl_data['title']}"
         )
         await v_url.client.send_file(
             v_url.chat_id,
@@ -117,9 +116,8 @@ async def download_video(v_url):
         os.remove(f"{ytdl_data['id']}.mp3")
     elif video:
         await lmao.edit(
-            f"`Preparing to upload video:`\
-        \n**{ytdl_data['title']}**\
-        \nby *{ytdl_data['uploader']}*"
+            f"උඩුගත කිරීමට සකසමින්\
+        \n**{ytdl_data['title']}**"
         )
         await v_url.client.send_file(
             v_url.chat_id,
@@ -135,4 +133,4 @@ __help__ = """
  • /ytaudio <link> - Youtube video එකක් audio එකක් විදිහට download කරන්න.
  • /video <Video එකේ නම> - දීපු නමට අදාල youtube video එක download කරන්න
 """
-__mod_name__ = "Youtube 🎞"
+__mod_name__ = "Youtube 🎬"
