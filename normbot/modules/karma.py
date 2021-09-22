@@ -2,13 +2,13 @@ from normbot import pbot
 import random
 from normbot.functions.karmafunc import (alpha_to_int, get_karma, get_karmas,
                                    int_to_alpha, is_karma_on, karma_off,
-                                   karma_on, update_karma,section, get_user_id_and_usernames)
+                                   karma_on, update_karma,section, get_user_id_and_usernames, capture_err)
 from pyrogram import filters
 
 karma_positive_group = 3
 karma_negative_group = 4
 
-__MODULE__ = "Karma"
+_MODULE__ = "Karma"
 __HELP__ = """[UPVOTE] - Use upvote keywords like "+", "+1", "thanks" etc to upvote a message.
 [DOWNVOTE] - Use downvote keywords like "-", "-1", etc to downvote a message.
 /karma_toggle [ENABLE|DISABLE] - Enable or Disable Karma System In Your Chat.
@@ -31,6 +31,7 @@ regex_downvote = r"^(-|--|-1|👎|-- .+)$"
     & ~filters.edited,
     group=karma_positive_group,
 )
+@capture_err
 async def upvote(_, message):
     if not await is_karma_on(message.chat.id):
         return
@@ -69,6 +70,7 @@ async def upvote(_, message):
     & ~filters.edited,
     group=karma_negative_group,
 )
+@capture_err
 async def downvote(_, message):
     if not await is_karma_on(message.chat.id):
         return
@@ -98,6 +100,7 @@ async def downvote(_, message):
 
 
 @pbot.on_message(filters.command("karma") & filters.group)
+@capture_err
 async def command_karma(_, message):
     chat_id = message.chat.id
     if not message.reply_to_message:
