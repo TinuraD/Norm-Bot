@@ -155,7 +155,7 @@ async def unauthorised(message: Message, permission, subFunc2):
     try:
         await message.reply_text(text)
     except ChatWriteForbidden:
-        await app.leave_chat(chatID)
+        await pbot.leave_chat(chatID)
     return subFunc2
 
 
