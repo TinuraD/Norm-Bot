@@ -25,7 +25,7 @@ regex_downvote = r"^(-|--|-1|👎|-- .+)$"
     & filters.group
     & filters.incoming
     & filters.reply
-    & filters.regex(regex_upvote, re.IGNORECASE)
+    & filters.regex(regex_upvote)
     & ~filters.via_bot
     & ~filters.bot
     & ~filters.edited,
@@ -64,7 +64,7 @@ async def upvote(_, message):
     & filters.group
     & filters.incoming
     & filters.reply
-    & filters.regex(regex_downvote, re.IGNORECASE)
+    & filters.regex(regex_downvote)
     & ~filters.via_bot
     & ~filters.bot
     & ~filters.edited,
