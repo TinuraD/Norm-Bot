@@ -19,7 +19,7 @@ from pyrogram.types import *
 from youtube_search import YoutubeSearch
 from normbot import pbot
 
-@pbot.on_message(filters.command(["vsong"]["video"]))
+@pbot.on_message(filters.command(["vsong", "video"]))
 async def vsong(pbot, message):
     ydl_opts = {
         'format':'best',
