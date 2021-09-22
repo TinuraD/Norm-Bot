@@ -87,7 +87,7 @@ async def karma_off(chat_id: int):
     return karmadb.delete_one({"chat_id_toggle": chat_id})
 
 
-async def karma_off(chat_id: int):
+async def karma_on(chat_id: int):
     is_karma = is_karma_off(chat_id)
     if not is_karma:
         return
