@@ -224,17 +224,10 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="උදවු 📔", callback_data="aboutmenu_howto"
-                        ),
-                        InlineKeyboardButton(
-                            text="ස්තූතිය 🙏", callback_data="aboutmenu_credit"
-                        ),
-                    ]
-                ]
-            )
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")],
+                 [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
+            ),
+        )
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
