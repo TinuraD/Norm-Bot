@@ -225,7 +225,7 @@ def start(update: Update, context: CallbackContext):
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Start in PM", url="http://t.me/sznormbot"),
-                 InlineKeyboardButton(text="System Stats", callback_data="stats_callback")]]
+                 InlineKeyboardButton(text="Stats", callback_data="stats_callback")]]
             ),
         )
 
