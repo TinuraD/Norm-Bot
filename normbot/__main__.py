@@ -218,7 +218,7 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.send_text(
+        update.effective_message.reply_text(
             " මම ඉන්නවෝ 🙋‍♂️\n<code>{}</code> ක කාලයක ඉදන්. වැඩි විස්තර සදහා පහළ බටන් භාවිතා කරන්න.".format(
                 uptime
             ),
