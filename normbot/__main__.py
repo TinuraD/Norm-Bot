@@ -70,7 +70,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="stats_callback"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
@@ -219,13 +219,13 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            " I'm online!!😊\n<b>Up since:</b> <code>{}</code>".format(
+            " මම ඉන්නවො 😊\n<code>{}</code> ඉදන්".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_"),
-                 InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
+                [[InlineKeyboardButton(text="Stat in PM", url="http://t.me/sznormbot"),
+                 InlineKeyboardButton(text="System Stats", callback_data="stats_callback")]]
             ),
         )
 
