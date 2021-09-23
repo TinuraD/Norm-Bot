@@ -18,7 +18,7 @@ __HELP__ = f"""
 async def take_ss(_, message: Message):
     try:
         if len(message.command) != 2:
-            return await message.reply_text("Screenshot එකක් ලබා ගැනීමට එකක් ලබා දෙන්න.")
+            return await message.reply_text("Screenshot එකක් ලබා ගැනීමට link එකක් ලබා දෙන්න.")
         url = message.text.split(None, 1)[1]
         m = await message.reply_text("Screenshot එක ගනිමින්")
         await m.edit("උඩුගත කරමින්")
