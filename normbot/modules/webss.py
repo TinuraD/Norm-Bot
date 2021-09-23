@@ -6,14 +6,6 @@ from pyrogram.types import Message
 
 from normbot import pbot
 
-__MODULE__ = "WebSS 📱"
-__HELP__ = f"""
-• /webss [link] - වෙබ්පිටුවක screenshot එකක් ගැනීම සදහා.
-• මෙහිදී ඔබ link එක ලබා දීමෙදී http:// හෝ https:// නිවැරදිව ලබා දිය යුතුය.
- උදා:- `/webss https://www.google.com/`
-"""
-
-
 @pbot.on_message(filters.command("webss"))
 async def take_ss(_, message: Message):
     try:
@@ -32,3 +24,11 @@ async def take_ss(_, message: Message):
         await m.delete()
     except Exception as e:
         await message.reply_text(str(e))
+      
+ __help__ = """
+• /webss [link] - වෙබ්පිටුවක screenshot එකක් ගැනීම සදහා.
+• මෙහිදී ඔබ link එක ලබා දීමෙදී http:// හෝ https:// නිවැරදිව ලබා දිය යුතුය.
+ උදා:- `/webss https://www.google.com/`
+"""
+
+__mod_name__ = "WebSS 📱"  
