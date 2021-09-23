@@ -50,7 +50,7 @@ async def bot_sys_stats():
 
 root@TinuraD:~$ Norm
 ------------------
-UPTIME: {formatter.get_readable_time((bot_uptime))}
+UPTIME: {(bot_uptime)}
 BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
 CPU: {cpu}%
 RAM: {mem}%
