@@ -16,6 +16,7 @@
 Other Credits
  - DaisyBot
  - Saitma Robot
+ - William Butcher Bot
  - TeamDaisyX
  - Telethon
  - Pyrogram
