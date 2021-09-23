@@ -53,7 +53,7 @@ def update(update: Update, context: CallbackContext):
     bot,args = context.bot, context.args
     msg = update.effective_message.reply_text('🔄') 
     for x in range(EDIT_TIMES):
-        msg.edit_text(🔄[x%9])
+        msg.edit_text('🔄'[x%9])
         time.sleep(EDIT_SLEEP)
     msg.edit_text(update_finish)
 
