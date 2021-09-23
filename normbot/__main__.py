@@ -68,7 +68,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="moretool_callback"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
@@ -536,15 +536,7 @@ def send_settings(chat_id, user_id, user=False):
                 "Seems like there aren't any chat settings available :'(\nSend this "
                 "in a group chat you're admin in to find its current settings!",
                 parse_mode=ParseMode.MARKDOWN,
-            )
-
-
-@pbot.on_callback_query(filters.regex("moretool_callback"))
-async def moretool_callbacc(_, CallbackQuery):
-    text = await f"""
-    Hi
-    """()
-    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)             
+            )          
             
 @run_async
 def settings_button(update, context):
