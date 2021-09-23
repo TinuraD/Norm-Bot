@@ -65,7 +65,7 @@ from normbot.modules.moretools import moretooltext
 from normbot.functions.stats import bot_sys_stats
 
 PM_START_TEXT = """
-හායි, මම [normbot](https://t.me/efnormbot). මම Group Manament Bot කෙනෙක්. මාව පාවිච්චි කරන විදිහ දැන විධාන 📌 උඩ click කරන්න. වැඩි විස්තර දැන ගන්න විස්තර 📃 උඩ click කරන්න.
+හායි, මම [normbot](https://t.me/sznormbot). මම Group Manament Bot කෙනෙක්. මාව පාවිච්චි කරන විදිහ දැන විධාන 📌 උඩ click කරන්න. වැඩි විස්තර දැන ගන්න විස්තර 📃 උඩ click කරන්න.
 """
 
 buttons = [
@@ -74,12 +74,12 @@ buttons = [
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
-        InlineKeyboardButton(text="Group එක", url="https://t.me/slplatform"),
-        InlineKeyboardButton(text="Channel එක", url="https://t.me/efbots"),
+        InlineKeyboardButton(text="Updates", url="https://t.me/szbots"),
+        InlineKeyboardButton(text="Owner Group", url="https://t.me/digitalgaweshakayochat"),
     ],
     [
         InlineKeyboardButton(
-            text="මාව Group එකට add කරන්න ➕️", url="t.me/efnormbotbot?startgroup=true"),
+            text="මාව Group එකට add කරන්න ➕️", url="https://t.me/sznormbot?startgroup=true"),
     ]
 ]
 
@@ -360,8 +360,10 @@ def normbot_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmenu_":
         query.message.edit_text(
-            text=f"හායි, මම [normbot](https://t.me/efnormbot)"
-            f"\n\n මට පුළුවන් අනිත් බොට්ල වගේම Group Manage කරන්න. ඒ වගේම ඊටත් වඩා තවත් Features ගණනාවක් මට තියෙන්වා. පහළ Buttons වලින් තවත් විස්තර දැන ගන්න පුළුවන්.",
+            text=f"හායි, මම [Normbot](https://t.me/sznormbot)"
+            f"\n\n Group Manage කිරීමට මාව භාවිතා කළ හැක.
+            f"\n Version එක - v3.0"
+            f"\n විස්තර - @szbots",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -389,7 +391,7 @@ def normbot_about_callback(update, context):
     elif query.data == "aboutmenu_howto":
         query.message.edit_text(
             text=f"භාවිතා කරන ආකාරය"
-            f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [ඩිජිටල් Platform](https://t.me/slplatform) group එකට join වෙලා ඔයාගේ ගැටළුව කියන්න.",
+            f"\n\nමාව ඔයාගේ group එකට add කරලා admin දෙන්න. එතකොට හරි 😁 ගැටළුවක් තිබ්බොත් අපේ [SZ Bot](https://t.me/szbots) channel එකට හරි [ඩිජිටල් ගවේෂකයෝ](https://t.me/digitalgaweshakayochat) group එකට හරි join වෙලා ඔයාගේ ගැටළුව කියන්න.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
