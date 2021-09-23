@@ -593,3 +593,11 @@ dispatcher.add_handler(LOCKED_HANDLER)
 dispatcher.add_handler(
     MessageHandler(Filters.all & Filters.group, del_lockables), PERM_GROUP
 )
+
+__help__ = """
+*කොරොනා:*
+• /covid - අලුත්ම කොරෝනා තොරතුරු දැන ගැනීමට.
+• Using Our @efcovidbot
+ 
+"""
+__mod_name__ = " Locks 🔐 "
