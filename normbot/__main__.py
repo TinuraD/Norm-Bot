@@ -218,8 +218,8 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            " මම ඉන්නවො 😊\n<code>{}</code> ඉදන්".format(
+        update.effective_message.send_message(
+            " මම ඉන්නවො 🙋‍♂️\n<code>{}</code> ක කාලයක ඉදන්".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
