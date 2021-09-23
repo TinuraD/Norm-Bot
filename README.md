@@ -3,7 +3,7 @@
 
 <p align="center"><a href="https://t.me/efnormbot"><img src="https://user-images.githubusercontent.com/87059430/129430514-573d5706-d5c6-4f38-a67b-85e7a3039398.png" width="150"></a></p>
 
-<h6 align="center"> @efnormbot - Hello 👋 I' Norm a group management bot. </h6>
+<h6 align="center"> @sznormbot - Modern and Smooth Group Management Bot 🇱🇰. </h6>
  
 <p align="center"> <a href=https://t.me/efnormbot><img src="https://user-images.githubusercontent.com/87059430/129430712-ea56286d-e8c7-457f-b267-b4b38704f955.png" width="150"></a></p>
 
