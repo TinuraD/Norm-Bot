@@ -224,8 +224,8 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")],
-                 [InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
+                [[InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_"),
+                 InlineKeyboardButton(text="🔙 ආපසු", callback_data="aboutmenu_")]]
             ),
         )
 
