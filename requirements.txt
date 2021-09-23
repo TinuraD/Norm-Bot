@@ -33,6 +33,7 @@ gtts
 tswift
 pytz
 youtube_dl
+nltk
 envparse
 motor
 youtube_search
