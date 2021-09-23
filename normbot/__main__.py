@@ -361,7 +361,7 @@ def normbot_about_callback(update, context):
     if query.data == "aboutmenu_":
         query.message.edit_text(
             text=f"හායි, මම [Normbot](https://t.me/sznormbot)"
-            f"\n\n Group Manage කිරීමට මාව භාවිතා කළ හැක.
+            f"\n\n Group Manage කිරීමට මාව භාවිතා කළ හැක."
             f"\n Version එක - v3.0"
             f"\n විස්තර - @szbots",
             parse_mode=ParseMode.MARKDOWN,
