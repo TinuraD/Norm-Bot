@@ -62,7 +62,7 @@ from normbot.functions.chat_status import is_user_admin
 from normbot.functions.misc import paginate_modules
 from normbot.functions.readable_time import get_readable_time
 from normbot.modules.moretools import moretooltext
-from DewmiBot.functions.stats import bot_sys_stats
+from normbot.functions.stats import bot_sys_stats
 
 PM_START_TEXT = """
 හායි, මම [normbot](https://t.me/efnormbot). මම Group Manament Bot කෙනෙක්. මාව පාවිච්චි කරන විදිහ දැන විධාන 📌 උඩ click කරන්න. වැඩි විස්තර දැන ගන්න විස්තර 📃 උඩ click කරන්න.
