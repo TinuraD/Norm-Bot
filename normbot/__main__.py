@@ -541,7 +541,9 @@ def send_settings(chat_id, user_id, user=False):
 
 @pbot.on_callback_query(filters.regex("moretool_callback"))
 async def stats_callbacc(_, CallbackQuery):
-    text = await "Hi"()
+    text = await f"""
+    Hi
+    """()
     await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)             
             
 @run_async
