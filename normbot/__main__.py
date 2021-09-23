@@ -62,6 +62,7 @@ from normbot.functions.chat_status import is_user_admin
 from normbot.functions.misc import paginate_modules
 from normbot.functions.readable_time import get_readable_time
 from normbot.modules.moretools import moretooltext
+from DewmiBot.functions.stats import bot_sys_stats
 
 PM_START_TEXT = """
 හායි, මම [normbot](https://t.me/efnormbot). මම Group Manament Bot කෙනෙක්. මාව පාවිච්චි කරන විදිහ දැන විධාන 📌 උඩ click කරන්න. වැඩි විස්තර දැන ගන්න විස්තර 📃 උඩ click කරන්න.
@@ -69,7 +70,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="විස්තර 📃", callback_data="aboutmenu_"),
+        InlineKeyboardButton(text="විස්තර 📃", callback_data="stats_callback"),
         InlineKeyboardButton(text="විධාන 📌", callback_data="help_back" ),
     ],
     [
@@ -159,7 +160,11 @@ def send_help(chat_id, text, keyboard=None):
         chat_id=chat_id, text=text, parse_mode=ParseMode.MARKDOWN, reply_markup=keyboard
     )
 
-
+@pbot.on_callback_query(filters.regex("stats_callback"))
+async def stats_callbacc(_, CallbackQuery):
+    text = await bot_sys_stats()
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    
 @run_async
 def test(update, context):
     try:
