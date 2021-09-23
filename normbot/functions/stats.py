@@ -39,12 +39,15 @@ async def bot_sys_stats():
     process = psutil.Process(os.getpid())
     stats = f"""
 
-root@TinuraD:~$ Norm
+Norm
 ------------------
-UPTIME: {get_readable_time((bot_uptime))}
-BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
-CPU: {cpu}%
-RAM: {mem}%
-DISK: {disk}%
+Version: 3.0 (Latest)
+Uptime : {get_readable_time((bot_uptime))}
+Bot    : {round(process.memory_info()[0] / 1024 ** 2)} MB
+CPU    : {cpu}%
+Ram    : {mem}%
+Disk   : {disk}%
+
+root@TinuraD
 """
     return stats
