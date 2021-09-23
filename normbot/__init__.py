@@ -186,6 +186,9 @@ WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
+# Bot Version
+normversion = "3.0"
+
 # Load at end to ensure all prev variables have been set
 from normbot.functions.handlers import (
     CustomCommandHandler,
