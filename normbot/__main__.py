@@ -219,12 +219,12 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.send_message(
-            " මම ඉන්නවො 🙋‍♂️\n<code>{}</code> ක කාලයක ඉදන්".format(
+            " මම ඉන්නවෝ 🙋‍♂️\n<code>{}</code> ක කාලයක ඉදන්. වැඩි විස්තර සදහා පහළ බටන් භාවිතා කරන්න.".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Stat in PM", url="http://t.me/sznormbot"),
+                [[InlineKeyboardButton(text="Start in PM", url="http://t.me/sznormbot"),
                  InlineKeyboardButton(text="System Stats", callback_data="stats_callback")]]
             ),
         )
