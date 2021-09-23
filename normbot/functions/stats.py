@@ -7,6 +7,7 @@ import psutil
 from pyrogram import filters
 
 bot_start_time = time.time()
+from normbot import normversion
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -41,7 +42,7 @@ async def bot_sys_stats():
 
 Norm
 ------------------
-Version: 3.0 (Latest)
+Version: {normversion} (Latest)
 Uptime : {get_readable_time((bot_uptime))}
 Bot    : {round(process.memory_info()[0] / 1024 ** 2)} MB
 CPU    : {cpu}%
