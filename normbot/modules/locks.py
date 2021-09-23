@@ -553,31 +553,6 @@ def __migrate__(old_chat_id, new_chat_id):
 def __chat_settings__(chat_id, user_id):
     return build_lock_message(chat_id)
 
-
-_help__ = """
-Do stickers annoy you? or want to avoid people sharing links? or pictures? \
-You're in the right place!
-The locks module allows you to lock away some common items in the \
-telegram world; the bot will automatically delete them!
- • /locktypes - කරන්න පුළුවන් දේවල් දැන ගන්න.
- 
-*Admins only:*
- • /lock <type> - මොනාහරි Lock කරන්න.
- • /unlock <type> - මොනාහරි Unlock කරන්න.
- • /locks - දැනට lock කරලා තියෙන එව්වා.
- 
-Locks can be used to restrict a group's users.
-eg:
-Locking urls will auto-delete all messages with urls, locking stickers will restrict all \
-non-admin users from sending stickers, etc.
-Locking bots will stop non-admins from adding bots to the chat.
-*Note:*
- • Unlocking permission *info* will allow members (non-admins) to change the group information, such as the description or the group name
- • Unlocking permission *pin* will allow members (non-admins) to pinned a message in a group
-"""
-
-__mod_name__ = "Locks 🔐"
-
 LOCKTYPES_HANDLER = DisableAbleCommandHandler("locktypes", locktypes)
 LOCK_HANDLER = CommandHandler("lock", lock, pass_args=True)  # , filters=Filters.group)
 UNLOCK_HANDLER = CommandHandler(
@@ -595,9 +570,13 @@ dispatcher.add_handler(
 )
 
 __help__ = """
-*කොරොනා:*
-• /covid - අලුත්ම කොරෝනා තොරතුරු දැන ගැනීමට.
-• Using Our @efcovidbot
+ඔයාලගේ group වලට ලින්ක් දාන්න, බොට්ලා ඇඩ් කරන්න වගේ එව්වා නවත්තන්න පුළුවන් න්ම් හොදද?
+එහෙම ඕනේ නම් පහළ විදිහට කරන්න පුළුවන්.
+ • /locktypes - කරන්න පුළුවන් දේවල් දැන ගන්න.
  
+*Admins only:*
+ • /lock <type> - මොනාහරි Lock කරන්න.
+ • /unlock <type> - මොනාහරි Unlock කරන්න.
+ • /locks - දැනට lock කරලා තියෙන එව්වා.
 """
 __mod_name__ = " Locks 🔐 "
