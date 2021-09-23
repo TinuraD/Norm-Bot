@@ -4,7 +4,7 @@ from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
 from normbot import DEV_USERS, dispatcher
 from normbot.modules.disable import DisableAbleCommandHandler
-from normbot.modules.helper_funcs.chat_status import dev_plus
+from normbot.functions.chat_status import dev_plus
 
 
 def convert(speed):
