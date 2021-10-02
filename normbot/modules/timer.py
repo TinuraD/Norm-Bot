@@ -94,7 +94,6 @@ async def stop_timer(Client, message):
         await asyncio.sleep(e.x)
 
 __help__ = """
-*කොරොනා:*
-• /covid - අලුත්ම කොරෝනා තොරතුරු දැන ගැනීමට. 
+• /settime "time" "Event Name" - To set Timer
 """
 __mod_name__ = " Timer "
