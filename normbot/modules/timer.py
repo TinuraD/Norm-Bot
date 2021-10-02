@@ -96,4 +96,4 @@ async def stop_timer(Client, message):
 __help__ = """
 • /settime "time" "Event Name" - To set Timer
 """
-__mod_name__ = " Timer "
+__mod_name__ = " Timer ⏲ "
