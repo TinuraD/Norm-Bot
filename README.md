@@ -1,19 +1,18 @@
 # Norm 🤖 - Telegram Bot
+- Python Telegram BBot based group manager telegram bot.
+- Can be found as [@szcovidbot](http://t.me/szcaptionbot) in telegram.
+- This is a cloned and modified version of [DaisyX Bot's old version](https://github.com/TeamDaisyX/Daisy-OLD).
 
+## Features
+- Main group managment features.
 
-<p align="center"><a href="https://t.me/efnormbot"><img src="https://user-images.githubusercontent.com/87059430/129430514-573d5706-d5c6-4f38-a67b-85e7a3039398.png" width="150"></a></p>
-
-<h6 align="center"> @sznormbot - Modern and Smooth Group Management Bot 🇱🇰. </h6>
- 
-<p align="center"> <a href=https://t.me/efnormbot><img src="https://user-images.githubusercontent.com/87059430/129430712-ea56286d-e8c7-457f-b267-b4b38704f955.png" width="150"></a></p>
-
-# Deploy your own bot here.
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TinuraD/NormBot.git)
+## Deploy your own bot here.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TinuraD/Norm.git)
 ## Credits
 
-- This bot besed on [TG Bot](https://github.com/PaulSonOfLars/tgbot) which made by [PaulSonOfLars](https://github.com/PaulSonOfLars). So oiginal credits go to [PaulSonOfLars](https://github.com/PaulSonOfLars) and his dedication.
+- This bot besed on [TG Bot](https://github.com/PaulSonOfLars/tgbot) which made by [PaulSonOfLars](https://github.com/PaulSonOfLars). So oiginal credits go to [PaulSonOfLars](https://github.com/PaulSonOfLars) and his dedication. And Norm was clone by [DaisyX Bot's old version](https://github.com/TeamDaisyX/Daisy-OLD), so credits also goes to [Team DaisyX](https://github.com/TeamDaisyX/).
 
-Other Credits
+### Other Credits
  - DaisyBot
  - Saitma Robot
  - William Butcher Bot
@@ -23,7 +22,3 @@ Other Credits
  - MaxRobot
  - SZ Rose Bot
  - SL Bot Zone
-
-## Contributors
-
-- Tinura Dinith <a href="https://github.com/TinuraD"><img src="https://img.shields.io/badge/TinuraD-107D8D?logo=github"></a>
