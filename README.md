@@ -1,10 +1,14 @@
 # Norm 🤖 - Telegram Bot
 - Python Telegram BBot based group manager telegram bot.
-- Can be found as [@szcovidbot](http://t.me/szcaptionbot) in telegram.
+- Can be found as [@sznormbot](http://t.me/sznormbot) in telegram.
 - This is a cloned and modified version of [DaisyX Bot's old version](https://github.com/TeamDaisyX/Daisy-OLD).
 
 ## Features
 - Main group managment features.
+- Anit-spam mode.
+- Some parts in Sinhala language 🇱🇰.
+- Filters Support.
+- And more features
 
 ## Deploy your own bot here.
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TinuraD/Norm.git)
