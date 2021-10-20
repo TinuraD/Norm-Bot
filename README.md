@@ -1,7 +1,7 @@
 # Norm 🤖 - Telegram Bot
 - Python Telegram BBot based group manager telegram bot.
 - Can be found as [@sznormbot](http://t.me/sznormbot) in telegram.
-- This is a cloned and modified version of [DaisyX Bot's old version](https://github.com/TeamDaisyX/Daisy-OLD).
+- This is a cloned and modified version of [DaisyX Bot(old version)](https://github.com/TeamDaisyX/Daisy-OLD).
 
 ## Features
 - Main group managment features.
