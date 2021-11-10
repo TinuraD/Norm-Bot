@@ -56,7 +56,7 @@ async def chatbot(_, message):
     chat_id = message.chat.id
     if not (is_chatbot_indb(str(message.chat.id))):
         return
-    if not message.reply_to_message.from_user.id in BOT_ID:
+    if not (message.reply_to_message.from_user.id == BOT_ID):
         return
     if message.text[0] == "/":
         return
