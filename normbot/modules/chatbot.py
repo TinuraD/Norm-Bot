@@ -35,11 +35,17 @@ async def chatbot_toggle(_, message):
     status = status.lower()
     chat_id = message.chat.id
     if status == "on":
-        addchatbot(str(chat_id))
-        await message.reply_text("Chat bot enabled.")
+        if (is_chatbot_indb(str(message.chat.id))):
+            return await message.reply("Already turned on")
+        else:
+         addchatbot(str(chat_id))
+         await message.reply_text("Chat bot enabled.")
     elif status == "off":
-        rmchatbot(str(chat_id))
-        await message.reply_text("Chat bot disabled.")
+        if not (is_chatbot_indb(str(message.chat.id))):
+            return await message.reply("Already turned off")
+        else:
+         rmchatbot(str(chat_id))
+         await message.reply_text("Chat bot disabled.")
     else:
         await message.reply_text("Use /chatbot with on or off")
 
