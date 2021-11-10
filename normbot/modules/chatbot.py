@@ -1,7 +1,6 @@
 import requests, functools
 from normbot import pbot
 from pyrogram import filters
-from normbot.functions.admin import adminsonly
 from normbot.functions.pyrofilters import chatbotgroup
 from normbot.utils.sql.chatbot import is_chatbot_indb, addchatbot, rmchatbot
 from googletrans import Translator
