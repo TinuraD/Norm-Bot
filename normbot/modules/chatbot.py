@@ -1,7 +1,6 @@
 import requests, functools
 from normbot import pbot
 from pyrogram import filters
-from normbot.functions.pyrofilters import chatbotgroup
 from normbot.utils.sql.chatbot import is_chatbot_indb, addchatbot, rmchatbot
 from googletrans import Translator
 
@@ -53,7 +52,7 @@ async def chatbot_toggle(_, message):
     & ~filters.bot 
     & ~filters.channel 
     & ~filters.forwarded,
-    group=chatbotgroup)
+    group=4)
 async def chatbot(_, message):
     chat_id = message.chat.id
     if not (is_chatbot_indb(str(message.chat_id))):
