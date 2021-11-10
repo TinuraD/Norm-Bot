@@ -62,8 +62,8 @@ async def chatbot(_, message):
         senderr = message.reply_to_message.from_user.id
     except:
         return
-    if not(senderr in BOT_ID):
-        return await message.reply("no")
+    if not(senderr in str(BOT_ID)):
+        return
     if message.text[0] == "/":
         return
     await pbot.send_chat_action(message.chat.id, "typing")
@@ -86,8 +86,6 @@ async def chatbot(_, message):
 async def chatbotadv(_, message):
     chat_id = message.chat.id
     if not (is_chatbot_indb(str(message.chat.id))):
-        return
-    if not message.reply_to_message.from_user.id in BOT_ID:
         return
     if message.text[0] == "/":
         return
