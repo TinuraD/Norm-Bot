@@ -5,7 +5,7 @@ from normbot.utils.sql.chatbot import is_chatbot_indb, addchatbot, rmchatbot
 from googletrans import Translator
 
 tr = Translator()
-BOT_ID = 1976629825
+BOT_ID = int("1976629825")
 
 def is_admin(func):
     @functools.wraps(func)
