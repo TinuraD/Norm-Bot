@@ -1,11 +1,10 @@
 import requests, functools
-from normbot import pbot
+from normbot import pbot, BOT_ID
 from pyrogram import filters
 from normbot.utils.sql.chatbot import is_chatbot_indb, addchatbot, rmchatbot
 from googletrans import Translator
 
 tr = Translator()
-BOT_ID = int("1976629825")
 
 def is_admin(func):
     @functools.wraps(func)
