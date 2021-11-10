@@ -13,13 +13,13 @@ class Chatbot(BASE):
 Chatbot.__table__.create(checkfirst=True)
 
 
-def add_hatbot(chat_id: str):
+def addchatbot(chat_id: str):
     nightmoddy = Chatbot(str(chat_id))
     SESSION.add(nightmoddy)
     SESSION.commit()
 
 
-def rmhatbot(chat_id: str):
+def rmchatbot(chat_id: str):
     rmnightmoddy = SESSION.query(Chatbot).get(str(chat_id))
     if rmnightmoddy:
         SESSION.delete(rmnightmoddy)
