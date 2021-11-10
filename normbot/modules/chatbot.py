@@ -75,6 +75,31 @@ async def chatbot(_, message):
     msg = tr.translate(textmsg, src='en', dest=lang)
     await message.reply_text(msg.text)
 
+@pbot.on_message(
+    filters.regex("Rose|ROSE|szrose|SZROSE|SZrose|rosebot|szrosebot")
+    & ~filters.bot
+    & ~filters.via_bot
+    & ~filters.forwarded
+    & ~filters.reply
+    & ~filters.channel
+    & ~filters.edited)
+async def chatbotadv(_, message):
+    chat_id = message.chat.id
+    if not (is_chatbot_indb(str(message.chat_id))):
+        return
+    if not message.reply_to_message.from_user.id in BOT_ID:
+        return
+    if message.text[0] == "/":
+        return
+    await pbot.send_chat_action(message.chat.id, "typing")
+    lang = tr.translate(message.text).src
+    trtoen = (message.text if lang=="en" else tr.translate(message.text, dest="en").text).replace(" ", "%20")
+    text = trtoen.replace(" ", "%20") if len(message.text) < 2 else trtoen
+    affiliateplus = requests.get(f"https://api.affiliateplus.xyz/api/chatbot?message={text}&botname=Bolt%20Backer&ownername=Tinura%20Dinith&user=1")
+    textmsg = (affiliateplus.json()["message"])
+    msg = tr.translate(textmsg, src='en', dest=lang)
+    await message.reply_text(msg.text)    
+    
 __name__ = "Chat Bot 🤖"
 __help__ = """
 • /chatbot `[on/off]` - To turn on and off chatbot
