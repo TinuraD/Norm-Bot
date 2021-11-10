@@ -62,7 +62,7 @@ async def chatbot(_, message):
         senderr = message.reply_to_message.from_user.id
     except:
         return
-    if not(senderr in str(BOT_ID)):
+    if not(str(senderr) in BOT_ID):
         return
     if message.text[0] == "/":
         return
