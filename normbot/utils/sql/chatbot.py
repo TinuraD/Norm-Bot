@@ -3,7 +3,7 @@ from normbot.utils.sql import BASE, SESSION
 
 
 class Chatbot(BASE):
-    __tablename__ = "hatbot"
+    __tablename__ = "chatbot"
     chat_id = Column(String(14), primary_key=True)
 
     def __init__(self, chat_id):
@@ -14,15 +14,15 @@ Chatbot.__table__.create(checkfirst=True)
 
 
 def addchatbot(chat_id: str):
-    nightmoddy = Chatbot(str(chat_id))
-    SESSION.add(nightmoddy)
+    chatbotty = Chatbot(str(chat_id))
+    SESSION.add(chatbotty)
     SESSION.commit()
 
 
 def rmchatbot(chat_id: str):
-    rmnightmoddy = SESSION.query(Chatbot).get(str(chat_id))
-    if rmnightmoddy:
-        SESSION.delete(rmnightmoddy)
+    rmchatbotty = SESSION.query(Chatbot).get(str(chat_id))
+    if rmchatbotty:
+        SESSION.delete(rmchatbotty)
         SESSION.commit()
 
 
