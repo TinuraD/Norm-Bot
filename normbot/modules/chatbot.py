@@ -76,13 +76,13 @@ async def chatbot(_, message):
     lang = tr.translate(message.text).src
     trtoen = (message.text if lang=="en" else tr.translate(message.text, dest="en").text).replace(" ", "%20")
     text = trtoen.replace(" ", "%20") if len(message.text) < 2 else trtoen
-    affiliateplus = requests.get(f"https://api.affiliateplus.xyz/api/chatbot?message={text}&botname=Bolt%20Backer&ownername=Tinura%20Dinith&user=1")
+    affiliateplus = requests.get(f"https://api.affiliateplus.xyz/api/chatbot?message={text}&botname=Norm%20Bot&ownername=Tinura%20Dinith&user=1")
     textmsg = (affiliateplus.json()["message"])
     msg = tr.translate(textmsg, src='en', dest=lang)
     await message.reply_text(msg.text)
 
 @pbot.on_message(
-    filters.regex("Rose|ROSE|szrose|SZROSE|SZrose|rosebot|szrosebot")
+    filters.regex("Normbot|Norm")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
