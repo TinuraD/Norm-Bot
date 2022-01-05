@@ -104,15 +104,16 @@ def broadcast(update: Update, context: CallbackContext):
 def log_user(update: Update, context: CallbackContext):
     chat = update.effective_chat
     msg = update.effective_message
-
-    sql.update_user(msg.from_user.id, msg.from_user.username, chat.id, chat.title)
-
+    if chat.type == chat.PRIVATE:
+       sql.update_user(msg.from_user.id, msg.from_user.username)
+       print("Private")
+    if chat.type != chat.PRIVATE:
+       sql.update_chat(msg.chat.id, msg.chat.title)
+       print("Public")
     if msg.reply_to_message:
         sql.update_user(
             msg.reply_to_message.from_user.id,
-            msg.reply_to_message.from_user.username,
-            chat.id,
-            chat.title,
+            msg.reply_to_message.from_user.username
         )
 
     if msg.forward_from:
