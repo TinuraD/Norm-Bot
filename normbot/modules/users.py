@@ -1,6 +1,5 @@
 from io import BytesIO
 from time import sleep
-
 from telegram import TelegramError, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
@@ -8,9 +7,7 @@ from telegram.ext import (
     CommandHandler,
     Filters,
     MessageHandler,
-    run_async,
-)
-
+    run_async)
 import normbot.utils.sql.users_sql as sql
 from normbot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
 from normbot.functions.chat_status import dev_plus, sudo_plus
@@ -104,16 +101,15 @@ def broadcast(update: Update, context: CallbackContext):
 def log_user(update: Update, context: CallbackContext):
     chat = update.effective_chat
     msg = update.effective_message
-    if chat.type == chat.PRIVATE:
-       sql.update_user(msg.from_user.id, msg.from_user.username)
-       print("Private")
-    if chat.type != chat.PRIVATE:
-       sql.update_chat(msg.chat.id, msg.chat.title)
-       print("Public")
+
+    sql.update_user(msg.from_user.id, msg.from_user.username, chat.id, chat.title)
+
     if msg.reply_to_message:
         sql.update_user(
             msg.reply_to_message.from_user.id,
-            msg.reply_to_message.from_user.username
+            msg.reply_to_message.from_user.username,
+            chat.id,
+            chat.title,
         )
 
     if msg.forward_from:
@@ -181,7 +177,7 @@ BROADCAST_HANDLER = CommandHandler(
 )
 USER_HANDLER = MessageHandler(Filters.all & Filters.group, log_user)
 CHAT_CHECKER_HANDLER = MessageHandler(Filters.all & Filters.group, chat_checker)
-CHATLIST_HANDLER = CommandHandler("allgroups", chats)
+CHATLIST_HANDLER = CommandHandler("groups", chats)
 
 dispatcher.add_handler(USER_HANDLER, USERS_GROUP)
 dispatcher.add_handler(BROADCAST_HANDLER)
